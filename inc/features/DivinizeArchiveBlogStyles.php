@@ -1,9 +1,9 @@
 <?php
 /**
- * Expand Divi Archive Blog Styles
+ * DIVInize Archive Blog Styles
  * adds blog styles to the arrchive pages
  *
- * @package  ExpandDivi/ExpandDiviArchiveBlogStyles
+ * @package  DIVInize/DivinizeArchiveBlogStyles
  */
 
 // exit when accessed directly
@@ -11,13 +11,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class ExpandDiviArchiveBlogStyles {
+class DivinizeArchiveBlogStyles {
 
 	/**
 	 * constructor
 	 */
 	function __construct() {
-		add_filter( 'body_class', array( $this, 'expand_divi_add_style_class' ) );	
+		add_filter( 'body_class', array( $this, 'divinize_add_style_class' ) );	
 	}
 
 	/**
@@ -25,14 +25,14 @@ class ExpandDiviArchiveBlogStyles {
 	 *
 	 * @return array
 	 */
-	function expand_divi_add_style_class( $classes ) {
+	function divinize_add_style_class( $classes ) {
 
 		if ( is_category() || is_tag() || is_author() || is_search() || ( ! is_front_page() && is_home() ) ) {
-			$classes[] = 'expand-divi-blog-grid';
+			$classes[] = 'divinize-blog-grid';
 		}
 
     	return $classes;
 	}
 }
 
-new ExpandDiviArchiveBlogStyles();
+new DivinizeArchiveBlogStyles();

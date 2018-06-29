@@ -1,9 +1,9 @@
 <?php
 /**
- * Expand Divi Related Posts
+ * DIVInize Related Posts
  * adds related posts to single posts
  *
- * @package  ExpandDivi/ExpandDiviRelatedPosts
+ * @package  DIVInize/DivinizeRelatedPosts
  */
 
 // exit when accessed directly
@@ -11,13 +11,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class ExpandDiviRelatedPosts {
+class DivinizeRelatedPosts {
 	
 	/**
 	 * constructor
 	 */
 	function __construct() {
-		add_filter( 'the_content', array( $this, 'expand_divi_output_related_posts' ) );	
+		add_filter( 'the_content', array( $this, 'divinize_output_related_posts' ) );	
 	}
 
 	/**
@@ -25,7 +25,7 @@ class ExpandDiviRelatedPosts {
 	 *
 	 * @return string
 	 */
-	function expand_divi_output_related_posts( $content ) {
+	function divinize_output_related_posts( $content ) {
 
 		if ( is_singular('post') ) {
 			global $post;
@@ -44,12 +44,12 @@ class ExpandDiviRelatedPosts {
 			);
 
 			if ( $query->have_posts() ) :
-				$html .= '<div class="expand_divi_related_posts"><h2 class="expand_divi_related_posts_title">';
-				$html.= esc_html__( 'You Might Also Like:', 'expand-divi' ); 
+				$html .= '<div class="divinize_related_posts"><h2 class="divinize_related_posts_title">';
+				$html.= esc_html__( 'You Might Also Like:', 'divinize' ); 
 				$html.= '</h2>';
 
 				while ( $query->have_posts() ) : $query->the_post();
-					$html .= '<div class="expand_divi_related_post"><a href="';
+					$html .= '<div class="divinize_related_post"><a href="';
 					$html .= get_the_permalink();
 					$html .= '">';
 					$html .= get_the_post_thumbnail();
@@ -62,8 +62,8 @@ class ExpandDiviRelatedPosts {
 
 				$html .= '</div>';
 				else:
-				$html .= '<p class="expand_divi_no_related_posts">';
-				$html .= esc_html__( 'No related posts!', 'expand-divi' );
+				$html .= '<p class="divinize_no_related_posts">';
+				$html .= esc_html__( 'No related posts!', 'divinize' );
 				$html .= '</p>';
 			endif;
 			
@@ -73,4 +73,4 @@ class ExpandDiviRelatedPosts {
 	}
 }
 
-new ExpandDiviRelatedPosts();
+new DivinizeRelatedPosts();

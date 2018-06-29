@@ -14,30 +14,30 @@
 
 
 /* 01 - author box */
-.expand_divi_author_box {
+.divinize_author_box {
     padding: 40px;
     box-shadow: 1px 1px 25px rgba(0,0,0,0.12);
     margin: 40px auto;    
     overflow: hidden;
 }
-.expand_divi_author_avatar {
+.divinize_author_avatar {
     float: left;
     width:80px;
     margin-right: 20px;
-}
-.expand_divi_author_avatar img {
+}ƒ
+.divinize_author_avatar img {
     border-radius: 100%;
     border: 1px solid #ccc;
 }
-.expand_divi_author_bio_wrap {
+.divinize_author_bio_wrap {
     width: 84%;
     float: left;
 }
 @media only screen and ( min-width: 623px ) and ( max-width: 1270px ) {
-	.expand_divi_author_bio_wrap {width: 76%;}
+	.divinize_author_bio_wrap {width: 76%;}
 }
 @media only screen and ( max-width: 622px ) {
-	.expand_divi_author_bio_wrap {
+	.divinize_author_bio_wrap {
     	width: 100%;
     	margin-top: 30px;
 	}
@@ -45,8 +45,8 @@
 
 
 /* 02 - related posts */
-.expand_divi_related_posts {margin: 30px auto; }
-.expand_divi_related_post {
+.divinize_related_posts {margin: 30px auto; }
+.divinize_related_post {
     width: 31.3%;
     min-height: 225px;
     float: left;
@@ -55,17 +55,17 @@
     margin-right: 3%;
     margin-bottom: 20px;
 }
-.expand_divi_related_post:nth-of-type(3) {margin-right: 0%;}
-.expand_divi_related_post img {
+.divinize_related_post:nth-of-type(3) {margin-right: 0%;}
+.divinize_related_post img {
     max-height: 140px;
     object-fit: cover;
 }
-.expand_divi_related_post h4 {
+.divinize_related_post h4 {
     padding: 15px;
     font-size: 15px;
 }
 @media only screen and ( max-width: 767px ) {
-    .expand_divi_related_post {
+    .divinize_related_post {
         width: 100%;
         margin-right: 0%;
     }
@@ -73,18 +73,18 @@
 
 
 /* 03 - post tags */
-.expand-divi-above-tags {margin-bottom: 30px;}
-.expand-divi-below-tags {margin: 40px auto;}
-.expand-divi-above-tags a:after,
-.expand-divi-below-tags a:after {content: ',';}
-.expand-divi-above-tags a:last-child:after,
-.expand-divi-below-tags a:last-child:after {content: '';}
+.divinize-above-tags {margin-bottom: 30px;}
+.divinize-below-tags {margin: 40px auto;}
+.divinize-above-tags a:after,
+.divinize-below-tags a:after {content: ',';}
+.divinize-above-tags a:last-child:after,
+.divinize-below-tags a:last-child:after {content: '';}
 
 
 /* 04 - archive blog styles */
-.expand-divi-blog-grid.blog .et_pb_post,
-.expand-divi-blog-grid.search .et_pb_post,
-.expand-divi-blog-grid.archive .et_pb_post {
+.divinize-blog-grid.blog .et_pb_post,
+.divinize-blog-grid.search .et_pb_post,
+.divinize-blog-grid.archive .et_pb_post {
     width: 31.3%;
     float: left;
     border: 1px solid #ededed;
@@ -93,32 +93,32 @@
     margin-bottom: 20px;
     padding: 10px;
 }
-.expand-divi-blog-grid.blog .et_pb_post img,
-.expand-divi-blog-grid.search .et_pb_post img,
-.expand-divi-blog-grid.archive .et_pb_post img{margin-bottom: 10px;}
-.expand-divi-blog-grid.blog .et_pb_post:nth-of-type(3n),
-.expand-divi-blog-grid.search .et_pb_post:nth-of-type(3n),
-.expand-divi-blog-grid.archive .et_pb_post:nth-of-type(3n) {margin-right: 0%;}
+.divinize-blog-grid.blog .et_pb_post img,
+.divinize-blog-grid.search .et_pb_post img,
+.divinize-blog-grid.archive .et_pb_post img{margin-bottom: 10px;}
+.divinize-blog-grid.blog .et_pb_post:nth-of-type(3n),
+.divinize-blog-grid.search .et_pb_post:nth-of-type(3n),
+.divinize-blog-grid.archive .et_pb_post:nth-of-type(3n) {margin-right: 0%;}
 @media only screen and ( min-width: 1025px ) {
-    .expand-divi-blog-grid.blog .et_pb_post:nth-of-type(3n+4),
-    .expand-divi-blog-grid.search .et_pb_post:nth-of-type(3n+4),
-    .expand-divi-blog-grid.archive .et_pb_post:nth-of-type(3n+4) {clear: both;}
+    .divinize-blog-grid.blog .et_pb_post:nth-of-type(3n+4),
+    .divinize-blog-grid.search .et_pb_post:nth-of-type(3n+4),
+    .divinize-blog-grid.archive .et_pb_post:nth-of-type(3n+4) {clear: both;}
 }
 @media only screen and ( min-width: 768px ) and ( max-width: 1024px ) {
-    .expand-divi-blog-grid.blog .et_pb_post,
-    .expand-divi-blog-grid.search .et_pb_post,
-    .expand-divi-blog-grid.archive .et_pb_post {width: 48.5%;}
-    .expand-divi-blog-grid.blog .et_pb_post:nth-of-type(2n+1),
-    .expand-divi-blog-grid.search .et_pb_post:nth-of-type(2n+1),
-    .expand-divi-blog-grid.archive .et_pb_post:nth-of-type(2n+1) {margin-right: 3%;}
-    .expand-divi-blog-grid.blog .et_pb_post:nth-of-type(2n+2),
-    .expand-divi-blog-grid.search .et_pb_post:nth-of-type(2n+2),
-    .expand-divi-blog-grid.archive .et_pb_post:nth-of-type(2n+2) {margin-right: 0%;}
+    .divinize-blog-grid.blog .et_pb_post,
+    .divinize-blog-grid.search .et_pb_post,
+    .divinize-blog-grid.archive .et_pb_post {width: 48.5%;}
+    .divinize-blog-grid.blog .et_pb_post:nth-of-type(2n+1),
+    .divinize-blog-grid.search .et_pb_post:nth-of-type(2n+1),
+    .divinize-blog-grid.archive .et_pb_post:nth-of-type(2n+1) {margin-right: 3%;}
+    .divinize-blog-grid.blog .et_pb_post:nth-of-type(2n+2),
+    .divinize-blog-grid.search .et_pb_post:nth-of-type(2n+2),
+    .divinize-blog-grid.archive .et_pb_post:nth-of-type(2n+2) {margin-right: 0%;}
 }
 @media only screen and ( max-width: 767px ) {
-    .expand-divi-blog-grid.blog .et_pb_post,
-    .expand-divi-blog-grid.search .et_pb_post,
-    .expand-divi-blog-grid.archive .et_pb_post {
+    .divinize-blog-grid.blog .et_pb_post,
+    .divinize-blog-grid.search .et_pb_post,
+    .divinize-blog-grid.archive .et_pb_post {
         width: 100%;
         margin-right: 0%;
     }
@@ -126,41 +126,41 @@
 
 
 /* 05 - remove sidebar */
-.expand-divi-sidebar-global-remove #main-content > .container:before,
-.expand-divi-sidebar-posts-remove #main-content > .container:before,
-.expand-divi-sidebar-archive-remove #main-content > .container:before {background: none;}
-.expand-divi-sidebar-global-remove #sidebar,
-.expand-divi-sidebar-posts-remove #sidebar,
-.expand-divi-sidebar-archive-remove #sidebar {display: none;}
-.expand-divi-sidebar-global-remove #left-area,
-.expand-divi-sidebar-posts-remove #left-area,
-.expand-divi-sidebar-archive-remove #left-area {
+.divinize-sidebar-global-remove #main-content > .container:before,
+.divinize-sidebar-posts-remove #main-content > .container:before,
+.divinize-sidebar-archive-remove #main-content > .container:before {background: none;}
+.divinize-sidebar-global-remove #sidebar,
+.divinize-sidebar-posts-remove #sidebar,
+.divinize-sidebar-archive-remove #sidebar {display: none;}
+.divinize-sidebar-global-remove #left-area,
+.divinize-sidebar-posts-remove #left-area,
+.divinize-sidebar-archive-remove #left-area {
     width: 100% !important;
     padding-right: 0 !important;
 }
 
 
 /* 06 - widgets :: recent posts */
-.expand_divi_recent_post {
+.divinize_recent_post {
     overflow: hidden;
     margin-bottom: 10px;
     min-width: 180px;
 }
-.expand_divi_recent_post img {
+.divinize_recent_post img {
     width: 50px;
     height: 50px;
     object-fit: cover;
     float: left;
     margin-right: 9px;
 }
-.expand_divi_recent_post h5 {
+.divinize_recent_post h5 {
     font-size: 13px;
     line-height: 16px;
 }
 
 
 /* 07 - widgets :: recent tweets */
-.expand_divi_tweet_container {
+.divinize_tweet_container {
     padding: 10px;
     margin-bottom: 15px;
     box-shadow: 
@@ -168,12 +168,12 @@
         0 1px 2px rgba(102,119,136,0.3), 
         0 8px 12px rgba(58,193,203,0.1);
  }
-.expand_divi_tweet_text {
+.divinize_tweet_text {
     padding-bottom: 0;
     font-size: 12px;
 }
-.expand_divi_tweet_text a {color: #00aeef;}
-.expand_divi_tweet_created_at {
+.divinize_tweet_text a {color: #00aeef;}
+.divinize_tweet_created_at {
     color: #ccc;
     font-size: 12px;
     font-style: italic;

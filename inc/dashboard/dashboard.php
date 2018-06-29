@@ -3,7 +3,7 @@
  * DIVInize Dashboard
  * Setup dashboard sections and fields
  *
- * @package  DIVInizeDashboard
+ * @package  DivinizeDashboard
  */
 
 // exit when accessed directly
@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-class DIVInizeDashboard {
+class DivinizeDashboard {
     private $divinize_sections;
     private $divinize_fields;
 
@@ -88,7 +88,7 @@ class DIVInizeDashboard {
     }
 
     function add_divinize_menu() {
-        add_submenu_page( 'tools.php', esc_html__( 'DIVInize', 'divinize' ), esc_html__( 'DIVInize', 'divinize' ), 'manage_options', 'divinize', =erray( $this, 'divinize_dashboard_output' ) );
+        add_submenu_page( 'tools.php', esc_html__( 'DIVInize', 'divinize' ), esc_html__( 'DIVInize', 'divinize' ), 'manage_options', 'divinize', array( $this, 'divinize_dashboard_output' ) );
     }
     
     function divinize_dashboard_output() {
@@ -184,4 +184,4 @@ class DIVInizeDashboard {
     }
 }
 
-new DIVInizeDashboard();
+new DivinizeDashboard();

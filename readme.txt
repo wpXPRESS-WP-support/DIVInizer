@@ -1,5 +1,5 @@
 ﻿=== DIVInize ===
-Contributors: faycalboutam, WordXpress
+Contributors: rogejr, tevyaw, cha01, faycalboutam
 Donate link: https://paypal.me/fiddler  
 Tags: Divi, Divinize, options, widgets, posts 
 Requires at least: 4.9

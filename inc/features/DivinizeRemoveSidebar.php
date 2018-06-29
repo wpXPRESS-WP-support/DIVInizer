@@ -1,9 +1,9 @@
 <?php
 /**
- * Expand Divi Remove Sidebar
+ * DIVInize Remove Sidebar
  * removes the sidebar from posts, archive pages or globally
  *
- * @package  ExpandDivi/ExpandDiviRemoveSidebar
+ * @package  DIVInize/DivinizeRemoveSidebar
  */
 
 // exit when accessed directly
@@ -11,15 +11,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class ExpandDiviRemoveSidebar {
+class DivinizeRemoveSidebar {
 	public $options;
 
 	/**
 	 * constructor
 	 */
 	function __construct() {
-		$this->options = get_option( 'expand_divi' );
-		add_filter( 'body_class', array( $this, 'expand_divi_remove_sidebar' ) );	
+		$this->options = get_option( 'divinize' );
+		add_filter( 'body_class', array( $this, 'divinize_remove_sidebar' ) );	
 	}
 
 	/**
@@ -27,18 +27,18 @@ class ExpandDiviRemoveSidebar {
 	 *
 	 * @return array
 	 */
-	function expand_divi_remove_sidebar( $classes ) {
+	function divinize_remove_sidebar( $classes ) {
 		if ( $this->options['remove_sidebar'] == 1 ) {
 			if ( is_category() || is_tag() || is_author() || is_search() || ( ! is_front_page() && is_home() ) || is_single() ) {
-				$classes[] = 'expand-divi-sidebar-global-remove';
+				$classes[] = 'divinize-sidebar-global-remove';
 			}
 		} elseif ( $this->options['remove_sidebar'] == 2 ) {
 			if ( is_single() ) {
-				$classes[] = 'expand-divi-sidebar-posts-remove';
+				$classes[] = 'divinize-sidebar-posts-remove';
 			}
 		} elseif ( $this->options['remove_sidebar'] == 3 ) {
 			if ( is_category() || is_tag() || is_author() || is_search() || ( ! is_front_page() && is_home() ) ) {
-				$classes[] = 'expand-divi-sidebar-archive-remove';
+				$classes[] = 'divinize-sidebar-archive-remove';
 			}
 		}
 
@@ -46,4 +46,4 @@ class ExpandDiviRemoveSidebar {
 	}
 }
 
-new ExpandDiviRemoveSidebar();
+new DivinizeRemoveSidebar();
