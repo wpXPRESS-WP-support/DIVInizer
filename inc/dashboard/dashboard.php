@@ -74,6 +74,13 @@ class DivinizeDashboard {
                 'default'  => 0,
                 'children' => ['Disabled', 'Grid']
             ],
+            'enable_lightbox' => [
+                'title'    => 'Lightbox',
+                'type'     => 'select',
+                'section'  => 'general', 
+                'default'  => 0,
+                'children' => ['Disabled', 'Enabled']
+            ],
             'remove_sidebar' => [
                 'title'    => 'Remove Sidebar',
                 'type'     => 'select',

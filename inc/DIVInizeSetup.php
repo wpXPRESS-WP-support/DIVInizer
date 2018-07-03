@@ -58,6 +58,9 @@ class DivinizeSetup {
 		}
 		if ( $this->divinize_check_field( $this->options['enable_archive_blog_styles'] ) ) {
 			require_once( DIVINIZE_PATH . 'inc/features/DivinizeArchiveBlogStyles.php' );
+		}		
+		if ( $this->divinize_check_field( $this->options['enable_lightbox'] ) ) {
+			require_once( DIVINIZE_PATH . 'inc/features/DivinizeLightbox.php' );
 		}
 		if ( $this->divinize_check_field( $this->options['remove_sidebar'] ) ) {
 			require_once( DIVINIZE_PATH . 'inc/features/DivinizeRemoveSidebar.php' );
