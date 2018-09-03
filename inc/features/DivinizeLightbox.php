@@ -17,10 +17,10 @@ class DivinizeLightbox {
 	 * constructor
 	 */
 	function __construct() {
-		add_action( 'wp_footer', array( $this, 'divinize_lightbox_js' ) );
+		add_action( 'wp_footer', array( $this, 'divinize_lightbox_js') );
 	}
 	/**
-	 * outputs preloader code
+	 *
 	 *
 	 * @return string
 	 */

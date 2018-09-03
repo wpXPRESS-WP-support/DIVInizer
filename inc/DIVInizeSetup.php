@@ -61,6 +61,9 @@ class DivinizeSetup {
 		}		
 		if ( $this->divinize_check_field( $this->options['enable_lightbox'] ) ) {
 			require_once( DIVINIZE_PATH . 'inc/features/DivinizeLightbox.php' );
+		}		
+		if ( $this->divinize_check_field( $this->options['enable_lightbox_jetpack'] ) ) {
+			require_once( DIVINIZE_PATH . 'inc/features/DivinizeLightbox.php' );
 		}
 		if ( $this->divinize_check_field( $this->options['remove_sidebar'] ) ) {
 			require_once( DIVINIZE_PATH . 'inc/features/DivinizeRemoveSidebar.php' );
@@ -73,7 +76,7 @@ class DivinizeSetup {
 	 * @return array
 	 */
 	function divinize_add_settings_link( $links ) {
-		$settings = esc_html__( 'Settings', 'divinize' );
+		$settings = esc_html__( 'Settings' );
    		$links[] = '<a href="tools.php?page=divinize">' . $settings . '</a>';
 		return $links;
 	}

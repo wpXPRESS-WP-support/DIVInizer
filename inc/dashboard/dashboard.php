@@ -95,18 +95,19 @@ class DivinizeDashboard {
     }
 
     function add_divinize_menu() {
-        add_submenu_page( 'tools.php', esc_html__( 'DIVInize', 'divinize' ), esc_html__( 'DIVInize', 'divinize' ), 'manage_options', 'divinize', array( $this, 'divinize_dashboard_output' ) );
+        add_submenu_page( 'et_divi_options', esc_html__( 'DIVInize', 'divinize' ), esc_html__( 'DIVInize', 'divinize' ), 'manage_options', 'divinize', array( $this, 'divinize_dashboard_output' ) );
     }
     
     function divinize_dashboard_output() {
         // check if the user is admin
-        if ( ! current_user_can('manage_options') ) {
-            wp_die( esc_html__( 'You do not have permission to access this page!', 'divinize' ) );
-        } ?>
+        //if ( ! current_user_can('manage_options') ) {
+            //wp_die( esc_html__( 'You do not have permission to access this page!', 'divinize' ) );
+        //} ?>
 
         <!-- dashboard interface -->
         <div id="divinize_wrap">
             <h1><?php esc_html_e( 'DIVInize Options', 'divinize' ); ?></h1>
+            <p>These settings are applied to posts and pages outside the Divi builder</p>
             <?php settings_errors(); ?>
 
             <form method="post" action="options.php" id="divinize_form">
