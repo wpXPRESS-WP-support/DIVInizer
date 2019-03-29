@@ -1,9 +1,9 @@
-﻿=== DIVInize ===
+﻿=== DIVInizer ===
 Contributors: rogejr, tevyaw, cha01, faycalboutam
 Donate link: https://paypal.me/fiddler  
-Tags: Divi, Divinize, options, widgets, posts 
+Tags: Divi, Divinizer, options, widgets, posts 
 Requires at least: 4.9
-Tested up to: 4.9
+Tested up to: 5.2
 Stable tag: 1.0
 Requires PHP: 5.6
 License: GPLv2 or later  
