@@ -1,5 +1,5 @@
 ﻿=== DIVInizer ===
-Contributors: rogejr, tevyaw, cha01, faycalboutam
+Contributors: wordxpress1, rogejr, tevyaw, cha01, faycalboutam
 Donate link: https://paypal.me/fiddler  
 Tags: Divi, Divinizer, options, widgets, posts 
 Requires at least: 4.9
