@@ -1,14 +1,14 @@
 <?php
 /**
- * Plugin Name: DIVInize
- * Plugin URI: https://wordx.press/divinize/
+ * Plugin Name: DIVInizer
+ * Plugin URI: https://wordx.press/divinizer/
  * Description: Adds more functionality to Divi Theme
  * Version: 1.0
  * Author: WordXpress
  * Author URI: https://wordx.press
- * Text Domain: DIVInize
+ * Text Domain: DIVInizer
  * License: GPLv2 or later
- * @package DIVInize
+ * @package DIVInizer
  */
 
 /* 
