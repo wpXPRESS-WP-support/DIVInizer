@@ -1,9 +1,9 @@
 <?php 
 /**
- * DIVInize Dashboard
+ * Expand Divi Dashboard
  * Setup dashboard sections and fields
  *
- * @package  DivinizeDashboard
+ * @package  ExpandDiviDashboard
  */
 
 // exit when accessed directly
@@ -11,75 +11,75 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-class DivinizeDashboard {
-    private $divinize_sections;
-    private $divinize_fields;
+class ExpandDiviDashboard {
+    private $expand_divi_sections;
+    private $expand_divi_fields;
 
     function __construct() {
         // the sections array
-        $this->divinize_sections = [
+        $this->expand_divi_sections = [
             'general' => [
                 'title' => ''
             ]
         ];
 
         // the fields array
-        $this->divinize_fields = [
+        $this->expand_divi_fields = [
             'enable_preloader' => [
-                'title'    => 'Pre-loader',
+                'title'    => 'Enable Pre-loader',
                 'type'     => 'select',
                 'section'  => 'general', 
                 'default'  => 0,
                 'children' => ['Disabled', 'Enabled']
             ], 
             'enable_fontawesome' => [
-                'title'    => 'Fontawesome',
+                'title'    => 'Enable Fontawesome',
                 'type'     => 'select',
                 'section'  => 'general', 
                 'default'  => 0,
                 'children' => ['Disabled', 'Enabled']
             ],           
             'enable_author_box' => [
-                'title'    => 'Author Box',
+                'title'    => 'Enable Author Box',
                 'type'     => 'select',
                 'section'  => 'general', 
                 'default'  => 0,
                 'children' => ['Disabled', 'Enabled']
             ],
             'enable_single_post_pagination' => [
-                'title'    => 'Single Post Pagination',
+                'title'    => 'Enable Single Post Pagination',
                 'type'     => 'select',
                 'section'  => 'general', 
                 'default'  => 0,
                 'children' => ['Disabled', 'Enabled']
             ],
             'enable_related_posts' => [
-                'title'    => 'Related Posts',
+                'title'    => 'Enable Related Posts',
                 'type'     => 'select',
                 'section'  => 'general', 
                 'default'  => 0,
                 'children' => ['Disabled', 'Enabled']
             ],
             'enable_post_tags' => [
-                'title'    => 'Post Tags',
+                'title'    => 'Enable Post Tags',
                 'type'     => 'select',
                 'section'  => 'general', 
                 'default'  => 0,
                 'children' => ['Disabled', 'Above Content', 'Below Content']
             ],
+            'enable_lightbox_everywhere' => [
+                'title'    => 'Enable Lightbox for posts and pages',
+                'type'     => 'select',
+                'section'  => 'general',
+                'default'  => 0,
+                'children' => ['Disabled', 'Enabled']
+            ],
             'enable_archive_blog_styles' => [
-                'title'    => 'Archive Blog Styles',
+                'title'    => 'Enable Archive Blog Styles',
                 'type'     => 'select',
                 'section'  => 'general', 
                 'default'  => 0,
                 'children' => ['Disabled', 'Grid']
-            ],
-            'enable_lightbox' => [
-                'title'    => 'Lightbox',
-                'type'     => 'select',
-                'section'  => 'general', 
-                'default'  => 0,
-                'children' => ['Disabled', 'Enabled']
             ],
             'remove_sidebar' => [
                 'title'    => 'Remove Sidebar',
@@ -90,35 +90,34 @@ class DivinizeDashboard {
             ]
         ];
 
-        add_action( 'admin_menu', array( $this, 'add_divinize_menu' ) );
+		add_action( 'admin_menu', array( $this, 'add_expand_divi_menu' ) );
         add_action( 'admin_init', array( $this, 'register_dashboard' ) );
     }
 
-    function add_divinize_menu() {
-        add_submenu_page( 'et_divi_options', esc_html__( 'DIVInize', 'divinize' ), esc_html__( 'DIVInize', 'divinize' ), 'manage_options', 'divinize', array( $this, 'divinize_dashboard_output' ) );
-    }
+    function add_expand_divi_menu() {
+		add_submenu_page( 'tools.php', esc_html__( 'Expand Divi', 'expand-divi' ), esc_html__( 'Expand Divi', 'expand-divi' ), 'manage_options', 'expand-divi', array( $this, 'expand_divi_dashboard_output' ) );
+	}
     
-    function divinize_dashboard_output() {
+    function expand_divi_dashboard_output() {
         // check if the user is admin
-        //if ( ! current_user_can('manage_options') ) {
-            //wp_die( esc_html__( 'You do not have permission to access this page!', 'divinize' ) );
-        //} ?>
+        if ( ! current_user_can('manage_options') ) {
+            wp_die( esc_html__( 'You do not have permission to access this page!', 'expand-divi' ) );
+        } ?>
 
         <!-- dashboard interface -->
-        <div id="divinize_wrap">
-            <h1><?php esc_html_e( 'DIVInize Options', 'divinize' ); ?></h1>
-            <p>These settings are applied to posts and pages outside the Divi builder</p>
+        <div id="expand_divi_wrap">
+            <h1><?php esc_html_e( 'Expand Divi Options', 'expand-divi' ); ?></h1>
             <?php settings_errors(); ?>
 
-            <form method="post" action="options.php" id="divinize_form">
-                <div class="divinize_sections_wrap">
+            <form method="post" action="options.php" id="expand_divi_form">
+                <div class="expand_divi_sections_wrap">
                 <?php
-                    settings_fields( 'divinize' );
-                    do_settings_sections( 'divinize' );
+                    settings_fields( 'expand_divi' );
+                    do_settings_sections( 'expand-divi' );
                 ?>
                 </div>
                 <?php submit_button(); ?>
-                <div id="divinize_save"></div>
+                <div id="expand_divi_save"></div>
 
             </form>
         </div>
@@ -126,18 +125,18 @@ class DivinizeDashboard {
     }
 
     function register_dashboard() {
-        register_setting( 'divinize', 'divinize', 'divinize_dashboard_validate' );
+        register_setting( 'expand_divi', 'expand_divi', 'expand_divi_dashboard_validate' );
 
-        foreach ($this->divinize_sections as $id => $value) {
-            add_settings_section( $id, $value['title'], array($this, 'divinize_section_callback'), 'divinize');
+        foreach ($this->expand_divi_sections as $id => $value) {
+            add_settings_section( $id, $value['title'], array($this, 'expand_divi_section_callback'), 'expand-divi');
         }
 
-        foreach ($this->divinize_fields as $id => $value) {
-            add_settings_field( $id, esc_html__( $value['title'], 'divinize' ), array($this, 'divinize_field_callback'), 'divinize', $value['section'], $id );
+        foreach ($this->expand_divi_fields as $id => $value) {
+            add_settings_field( $id, esc_html__( $value['title'], 'expand-divi' ), array($this, 'expand_divi_field_callback'), 'expand-divi', $value['section'], $id );
         }
     }
 
-    function divinize_dashboard_validate( $input ) {
+    function expand_divi_dashboard_validate( $input ) {
         $output = [];
 
         foreach ( $input as $key => $value ) {
@@ -158,32 +157,32 @@ class DivinizeDashboard {
         return $output;
     }
 
-    function divinize_field_sanitize( $key ) {
-        return $this->divinize_fields[ $key ]['sanitize'];
+    function expand_divi_field_sanitize( $key ) {
+        return $this->expand_divi_fields[ $key ]['sanitize'];
     }
 
     // callback of add_settings_section()
-    function divinize_section_callback( $args ) {
+    function expand_divi_section_callback( $args ) {
         return null;
     }
 
     // set the field's default value, used when no value is retrieved from DB
-    function divinize_default_id( $id ) {
-        return $this->divinize_fields[ $id ]['default'];
+    function expand_divi_default_id( $id ) {
+        return $this->expand_divi_fields[ $id ]['default'];
     }
 
     // callback of add_settings_field(), outputs the fields
-    function divinize_field_callback( $id ) {
-        $option = get_option( 'divinize' );
-        $id_field = isset( $option[ $id ] ) ? $option[ $id ] : $this->divinize_default_id( $id );
+    function expand_divi_field_callback( $id ) {
+        $option = get_option( 'expand_divi' );
+        $id_field = isset( $option[ $id ] ) ? $option[ $id ] : $this->expand_divi_default_id( $id );
         
         // output the field HTML according to de_field type
-        switch ( $this->divinize_fields[ $id ]['type'] ) {
+        switch ( $this->expand_divi_fields[ $id ]['type'] ) {
             case 'select':
-                echo '<select name="divinize[' . $id . ']">';
-                for ( $i = 0; $i < sizeof( $this->divinize_fields[ $id ]['children'] ); $i++ ) {
+                echo '<select name="expand_divi[' . $id . ']">';
+                for ( $i = 0; $i < sizeof( $this->expand_divi_fields[ $id ]['children'] ); $i++ ) {
                     echo "<option value='" . $i ."' " . selected( $id_field, $i, false ) . ">";
-                    esc_html_e( $this->divinize_fields[ $id ]['children'][ $i ], 'divinize' );
+                    esc_html_e( $this->expand_divi_fields[ $id ]['children'][ $i ], 'expand-divi' );
                     echo "</option>";
                 }
                 echo '</select>';
@@ -192,4 +191,4 @@ class DivinizeDashboard {
     }
 }
 
-new DivinizeDashboard();
+new ExpandDiviDashboard();
