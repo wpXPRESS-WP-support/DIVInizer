@@ -1,9 +1,9 @@
 <?php
 /**
- * Expand Divi Related Posts
+ * DIVInizer Related Posts
  * adds related posts to single posts
  *
- * @package  ExpandDivi/ExpandDiviRelatedPosts
+ * @package  DIVInizer/DIVInizerRelatedPosts
  */
 
 // exit when accessed directly
@@ -11,13 +11,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class ExpandDiviRelatedPosts {
+class DIVInizerRelatedPosts {
 	
 	/**
 	 * constructor
 	 */
 	function __construct() {
-		add_filter( 'the_content', array( $this, 'expand_divi_output_related_posts' ) );	
+		add_filter( 'the_content', array( $this, 'divinizer_output_related_posts' ) );	
 	}
 
 	/**
@@ -25,7 +25,7 @@ class ExpandDiviRelatedPosts {
 	 *
 	 * @return string
 	 */
-	function expand_divi_output_related_posts( $content ) {
+	function divinizer_output_related_posts( $content ) {
 
 		if ( is_singular('post') ) {
 			global $post;
@@ -55,12 +55,12 @@ class ExpandDiviRelatedPosts {
 			) );
 
 			if ( $query->have_posts() ) :
-				$html = '<div class="expand_divi_related_posts"><h2 class="expand_divi_related_posts_title">';
-				$html.= esc_html__( 'You Might Also Like:', 'expand-divi' ); 
+				$html = '<div class="divinizer_related_posts"><h2 class="divinizer_related_posts_title">';
+				$html.= esc_html__( 'You Might Also Like:', 'divinizer' ); 
 				$html.= '</h2>';
 
 				while ( $query->have_posts() ) : $query->the_post();
-					$html .= '<div class="expand_divi_related_post"><a href="';
+					$html .= '<div class="divinizer_related_post"><a href="';
 					$html .= get_the_permalink();
 					$html .= '">';
 					$html .= get_the_post_thumbnail();
@@ -74,8 +74,8 @@ class ExpandDiviRelatedPosts {
 
 				$html .= '</div>';
 				else:
-				$html = '<p class="expand_divi_no_related_posts">';
-				$html .= esc_html__( 'No related posts!', 'expand-divi' );
+				$html = '<p class="divinizer_no_related_posts">';
+				$html .= esc_html__( 'No related posts!', 'divinizer' );
 				$html .= '</p>';
 			endif;
 			
@@ -88,4 +88,4 @@ class ExpandDiviRelatedPosts {
 	}
 }
 
-new ExpandDiviRelatedPosts();
+new DIVInizerRelatedPosts();

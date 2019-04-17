@@ -1,13 +1,13 @@
 <?php
 /**
- * Plugin Name: Expand Divi
+ * Plugin Name: DIVInizer
  * Plugin URI: http://divi-expand.wp-skill.com/
  * Description: A plugin that adds more functionlity to the Divi theme
  * Version: 1.1.2
  * Author: Faycal Boutam
- * Text Domain: expand-divi
+ * Text Domain: divinizer
  * License: GPLv2 or later
- * @package ExpandDivi
+ * @package DIVInizer
  */
 
 /* 
@@ -32,20 +32,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // define plugin url constant
-if ( ! defined( 'EXPAND_DIVI_URL' ) ) {
-	define( 'EXPAND_DIVI_URL', plugin_dir_url( __FILE__ ) );
+if ( ! defined( 'DIVINIZER_URL' ) ) {
+	define( 'DIVINIZER_URL', plugin_dir_url( __FILE__ ) );
 }
 
 // define plugin path constant
-if ( ! defined( 'EXPAND_DIVI_PATH' ) ) {
-	define( 'EXPAND_DIVI_PATH', plugin_dir_path( __FILE__ ) );
+if ( ! defined( 'DIVINIZER_PATH' ) ) {
+	define( 'DIVINIZER_PATH', plugin_dir_path( __FILE__ ) );
 }
 
 // require setup class
-require_once( EXPAND_DIVI_PATH . 'inc/ExpandDiviSetup.php' );
+require_once( DIVINIZER_PATH . 'inc/DIVInizerSetup.php' );
 
 // localization
-function expand_divi_localization() {
-	load_plugin_textdomain( 'expand-divi', false, dirname( plugin_basename( __FILE__ ) ) . '/lang' );
+function divinizer_localization() {
+	load_plugin_textdomain( 'divinizer', false, dirname( plugin_basename( __FILE__ ) ) . '/lang' );
 }
-add_action('init', 'expand_divi_localization');
+add_action('init', 'divinizer_localization');

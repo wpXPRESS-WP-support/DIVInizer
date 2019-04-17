@@ -1,16 +1,16 @@
-#expand_divi_wrap {
+#divinizer_wrap {
     background: #fff;
     margin: 40px 20px;
     position: relative;
 }
-#expand_divi_wrap h1 {
+#divinizer_wrap h1 {
     background-color: #262734;
     padding: 20px 30px;
     font-size: 18px;
     color: #fff;
 }
-.expand_divi_sections_wrap {overflow: hidden;}
-.expand_divi_sections_wrap h2 {
+.divinizer_sections_wrap {overflow: hidden;}
+.divinizer_sections_wrap h2 {
     background: #373942;
     padding: 25px 70px;
     margin: 0;
@@ -21,11 +21,11 @@
     -webkit-transition: all 0.3s;
     box-shadow: 0 1px 15px 1px rgba(3, 3, 3, 0.5);
 }
-.expand_divi_sections_wrap h2:hover,
-.expand_divi_sections_wrap h2.selected {background-color: rgba(0, 0, 0, 0.84);}
-.expand_divi_sections_wrap table.form-table {margin: 30px;}
-.expand_divi_sections_wrap select {width: 30%;}
-#expand_divi_form p.submit input {
+.divinizer_sections_wrap h2:hover,
+.divinizer_sections_wrap h2.selected {background-color: rgba(0, 0, 0, 0.84);}
+.divinizer_sections_wrap table.form-table {margin: 30px;}
+.divinizer_sections_wrap select {width: 30%;}
+#divinizer_form p.submit input {
 	padding: 15px 20px;
 	margin: 10px 30px;
 	font-size: 14px;
@@ -37,7 +37,7 @@
 	box-shadow: none;
 	text-shadow: none;
 }
-#expand_divi_save_message {
+#divinizer_save_message {
 	display: block;
 	position: fixed;
 	top: 40%;

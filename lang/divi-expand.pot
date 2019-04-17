@@ -93,7 +93,7 @@ msgid "Archive Pages Only"
 msgstr ""
 
 #: inc/dashboard/dashboard.php:117
-msgid "Expand Divi"
+msgid "DIVInizer"
 msgstr ""
 
 #: inc/dashboard/dashboard.php:122
@@ -101,7 +101,7 @@ msgid "You do not have permission to access this page!"
 msgstr ""
 
 #: inc/dashboard/dashboard.php:127
-msgid "Expand Divi Options"
+msgid "DIVInizer Options"
 msgstr ""
 
 #: inc/features/DeRelatedPosts.php:48
@@ -117,7 +117,7 @@ msgid "Tags:"
 msgstr ""
 
 #: inc/widgets/DeRecentPostsWidget.php:21
-msgid "Expand Divi Recent Posts"
+msgid "DIVInizer Recent Posts"
 msgstr ""
 
 #: inc/widgets/DeRecentPostsWidget.php:22

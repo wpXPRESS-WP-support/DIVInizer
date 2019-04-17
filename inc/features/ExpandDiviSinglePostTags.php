@@ -1,9 +1,9 @@
 <?php
 /**
- * Expand Divi Single Post Tags
+ * DIVInizer Single Post Tags
  * adds tags to single posts
  *
- * @package  ExpandDivi/ExpandDiviSinglePostTags
+ * @package  DIVInizer/DIVInizerSinglePostTags
  */
 
 // exit when accessed directly
@@ -11,15 +11,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class ExpandDiviSinglePostTags {
+class DIVInizerSinglePostTags {
 	public $options;
 
 	/**
 	 * constructor
 	 */
 	function __construct() {
-		$this->options = get_option( 'expand_divi' );
-		add_filter( 'the_content', array( $this, 'expand_divi_output_single_post_tags' ) );
+		$this->options = get_option( 'divinizer' );
+		add_filter( 'the_content', array( $this, 'divinizer_output_single_post_tags' ) );
 	}
 
 	/**
@@ -27,12 +27,12 @@ class ExpandDiviSinglePostTags {
 	 *
 	 * @return string
 	 */
-	public function expand_divi_output_single_post_tags( $content ) {
+	public function divinizer_output_single_post_tags( $content ) {
 		if ( is_singular('post') ) {
 			$the_tags = get_the_tags();
 
 			if ( ( $this->options['enable_post_tags'] == 1 ) && ! empty( $the_tags ) ) {
-				$tags_above = '<div class="expand-divi-above-tags">| ';
+				$tags_above = '<div class="divinizer-above-tags">| ';
 				
 				foreach ( $the_tags as $tag ) {
 					$tags_above .=  ' <a href="';
@@ -46,7 +46,7 @@ class ExpandDiviSinglePostTags {
 				$output = $tags_above . $content;
 
 			} else if ( ( $this->options['enable_post_tags'] == 2 ) && ! empty( $the_tags ) ) {
-				$tags_below = '<div class="expand-divi-below-tags">' . esc_html__( 'Tags:', 'expand-divi' );
+				$tags_below = '<div class="divinizer-below-tags">' . esc_html__( 'Tags:', 'divinizer' );
 
 				foreach ( $the_tags as $tag ) {
 					$tags_below .=  ' <a href="';
@@ -67,4 +67,4 @@ class ExpandDiviSinglePostTags {
 	}
 }
 
-new ExpandDiviSinglePostTags();
+new DIVInizerSinglePostTags();

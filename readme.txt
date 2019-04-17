@@ -1,4 +1,4 @@
-﻿=== Expand Divi ===
+﻿=== DIVInizer ===
 Contributors: faycalboutam
 Tags: Divi, expand, options, widgets, posts  
 Requires at least: 4.9  
@@ -10,7 +10,7 @@ License: GPLv2 or later
 Adds more functionlity to the Divi theme.
 
 == Description ==
-Expand Divi is easy to use, simply install and activate the plugin, go to expand-divi Dashboard and enable the options that you’d like to have, easy one click options!
+DIVInizer is easy to use, simply install and activate the plugin, go to divinizer Dashboard and enable the options that you’d like to have, easy one click options!
 
 ## Optionns
 [Demo for all options](http://divi-expand.wp-skill.com/index.php/2017/04/02/lorem-ipsum-dolor-sit-amet-adipiscing-6/)
@@ -40,7 +40,7 @@ Enable and use one of the best icons font libraries on the web, inline with your
 == Installation ==
 1. Upload the plugin files to the `/wp-content/plugins/` directory, or install the plugin through the WordPress plugins screen directly.
 2. Activate the plugin through the 'Plugins' screen in WordPress
-3. Use the Settings->Tools->Expand Divi screen to configure the plugin
+3. Use the Settings->Tools->DIVInizer screen to configure the plugin
 
 == Screenshots ==
 1. Admin dashboard.

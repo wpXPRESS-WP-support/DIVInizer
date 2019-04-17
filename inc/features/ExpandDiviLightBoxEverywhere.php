@@ -1,9 +1,9 @@
 <?php
 /**
- * Expand Divi Lightbox
+ * DIVInizer Lightbox
  * opens all images in posts or pages in a lightbox
  *
- * @package  ExpandDivi/ExpandDiviLightBoxEverywhere
+ * @package  DIVInizer/DIVInizerLightBoxEverywhere
  */
 
 // exit when accessed directly
@@ -11,13 +11,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class ExpandDiviLightBoxEverywhere {
+class DIVInizerLightBoxEverywhere {
 
 	/**
 	 * constructor
 	 */
 	function __construct() {
-		add_action( 'wp_footer', array( $this, 'expand_divi_lightbox') );	
+		add_action( 'wp_footer', array( $this, 'divinizer_lightbox') );	
 	}
 
 	/**
@@ -25,7 +25,7 @@ class ExpandDiviLightBoxEverywhere {
 	 *
 	 * @return string
 	 */
-	function expand_divi_lightbox() {
+	function divinizer_lightbox() {
 		if ( is_singular() ) {
 				?><script>(function($){
 	$(document).ready(function(){
@@ -37,4 +37,4 @@ class ExpandDiviLightBoxEverywhere {
 		
 }
 
-new ExpandDiviLightBoxEverywhere();
+new DIVInizerLightBoxEverywhere();

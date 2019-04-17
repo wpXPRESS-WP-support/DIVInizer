@@ -1,9 +1,9 @@
 <?php
 /**
- * Expand Divi Remove Sidebar
+ * DIVInizer Remove Sidebar
  * removes the sidebar from posts, archive pages or globally
  *
- * @package  ExpandDivi/ExpandDiviRemoveSidebar
+ * @package  DIVInizer/DIVInizerRemoveSidebar
  */
 
 // exit when accessed directly
@@ -11,15 +11,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class ExpandDiviRemoveSidebar {
+class DIVInizerRemoveSidebar {
 	public $options;
 
 	/**
 	 * constructor
 	 */
 	function __construct() {
-		$this->options = get_option( 'expand_divi' );
-		add_filter( 'body_class', array( $this, 'expand_divi_remove_sidebar' ) );	
+		$this->options = get_option( 'divinizer' );
+		add_filter( 'body_class', array( $this, 'divinizer_remove_sidebar' ) );	
 	}
 
 	/**
@@ -27,18 +27,18 @@ class ExpandDiviRemoveSidebar {
 	 *
 	 * @return array
 	 */
-	function expand_divi_remove_sidebar( $classes ) {
+	function divinizer_remove_sidebar( $classes ) {
 		if ( $this->options['remove_sidebar'] == 1 ) {
 			if ( is_category() || is_tag() || is_author() || is_search() || ( ! is_front_page() && is_home() ) || is_single() ) {
-				$classes[] = 'expand-divi-sidebar-global-remove';
+				$classes[] = 'divinizer-sidebar-global-remove';
 			}
 		} elseif ( $this->options['remove_sidebar'] == 2 ) {
 			if ( is_single() ) {
-				$classes[] = 'expand-divi-sidebar-posts-remove';
+				$classes[] = 'divinizer-sidebar-posts-remove';
 			}
 		} elseif ( $this->options['remove_sidebar'] == 3 ) {
 			if ( is_category() || is_tag() || is_author() || is_search() || ( ! is_front_page() && is_home() ) ) {
-				$classes[] = 'expand-divi-sidebar-archive-remove';
+				$classes[] = 'divinizer-sidebar-archive-remove';
 			}
 		}
 
@@ -46,4 +46,4 @@ class ExpandDiviRemoveSidebar {
 	}
 }
 
-new ExpandDiviRemoveSidebar();
+new DIVInizerRemoveSidebar();

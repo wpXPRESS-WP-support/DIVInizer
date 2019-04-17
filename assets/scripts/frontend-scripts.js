@@ -2,9 +2,9 @@
    $( document ).ready( function() {
 
    		// move tags after the post meta
-         if ( $( '.expand-divi-above-tags' ) ) {
+         if ( $( '.divinizer-above-tags' ) ) {
             var post_meta = $( '.single-post .et_post_meta_wrapper .post-meta' );
-            $( '.expand-divi-above-tags' ).insertAfter(post_meta);
+            $( '.divinizer-above-tags' ).insertAfter(post_meta);
             post_meta.css({
                'margin-right': '5px',
                'display': 'inline',
