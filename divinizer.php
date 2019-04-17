@@ -42,10 +42,11 @@ if ( ! defined( 'DIVINIZER_PATH' ) ) {
 }
 
 // require setup class
-require_once( DIVINIZER_PATH . 'inc/DIVInizerSetup.php' );
+require_once DIVINIZER_PATH . 'inc/DIVInizerSetup.php';
 
 // localization
 function divinizer_localization() {
 	load_plugin_textdomain( 'divinizer', false, dirname( plugin_basename( __FILE__ ) ) . '/lang' );
 }
-add_action('init', 'divinizer_localization');
+
+add_action( 'init', 'divinizer_localization' );
