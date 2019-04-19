@@ -58,7 +58,7 @@ class DIVInizerDashboard {
 				'type'     => 'select',
 				'section'  => 'general',
 				'default'  => 0,
-				'children' => [ 'Disabled', 'Enabled' ],
+				'children' => [ 'Disabled', 'By Tags', 'By Categories' ],
 			],
 			'enable_post_tags'              => [
 				'title'    => 'Enable Post Tags',
