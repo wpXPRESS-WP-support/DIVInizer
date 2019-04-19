@@ -16,8 +16,8 @@ class DIVInizerLightBoxEverywhere {
 	/**
 	 * constructor
 	 */
-	function __construct() {
-		add_action( 'wp_footer', array( $this, 'divinizer_lightbox') );	
+	public function __construct() {
+		add_action( 'wp_footer', array( $this, 'divinizer_lightbox' ) );
 	}
 
 	/**
@@ -25,16 +25,19 @@ class DIVInizerLightBoxEverywhere {
 	 *
 	 * @return string
 	 */
-	function divinizer_lightbox() {
-		if ( is_singular() ) {
-				?><script>(function($){
-	$(document).ready(function(){
-		$('.entry-content a').find('img').parent('a').addClass('et_pb_lightbox_image');
-	});
-})(jQuery)</script><?php
-		}
+	public function divinizer_lightbox() {
+		?>
+		<script type="text/javascript">
+			(function ($) {
+				$(document).ready(function () {
+					$('.entry-content a').children('img').parent('a').addClass(function () {
+						return (($(this).attr("href").split("?", 1)[0].match(/\.(jpeg|jpg|gif|png)$/) != null) ? "et_pb_lightbox_image" : "");
+					});
+				});
+			})(jQuery)
+		</script>
+		<?php
 	}
-		
 }
 
 new DIVInizerLightBoxEverywhere();
