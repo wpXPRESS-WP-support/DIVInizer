@@ -13,11 +13,56 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 class DIVInizerRelatedPosts {
 
+	private $type = array();
+
 	/**
 	 * constructor
 	 */
 	public function __construct() {
+		$options    = get_option( 'divinizer' );
+		$this->type = $options['enable_related_posts'];
 		add_filter( 'the_content', array( $this, 'divinizer_output_related_posts' ) );
+	}
+
+	/**
+	 * Built the WP_Query object based on the type stored on the class
+	 *
+	 * @return WP_Query
+	 */
+	public function build_related_query() {
+		$taxonomy = 'post_tag';
+		if ( 'Categories' === $this->type ) {
+			$taxonomy = 'category';
+		}
+
+		$post_id = get_the_ID();
+		$terms   = get_the_terms( $post_id, $taxonomy );
+
+		$term_ids = array();
+		if ( is_array( $terms ) ) {
+			foreach ( $terms as $term ) {
+				$term_ids[] = $term->term_id;
+			}
+		}
+
+		$query = new WP_Query(
+			array(
+				'tax_query'      => array(
+					array(
+						'taxonomy' => $taxonomy,
+						'field'    => 'id',
+						'terms'    => $term_ids,
+						'operator' => 'IN',
+					),
+				),
+				'post_type'      => 'post',
+				'posts_per_page' => '3',
+				'orderby'        => 'rand',
+				'post__not_in'   => array( $post_id ),
+			)
+		);
+
+		return $query;
 	}
 
 	/**
@@ -28,33 +73,8 @@ class DIVInizerRelatedPosts {
 	public function divinizer_output_related_posts( $content ) {
 
 		if ( is_singular( 'post' ) ) {
-			global $post;
-			$post_id = get_the_ID();
-			$terms   = get_the_terms( $post_id, 'post_tag' );
 
-			$term_ids = array();
-			if ( is_array( $terms ) ) {
-				foreach ( $terms as $term ) {
-					$term_ids[] = $term->term_id;
-				}
-			}
-
-			$query = new WP_Query(
-				array(
-					'tax_query'      => array(
-						array(
-							'taxonomy' => 'post_tag',
-							'field'    => 'id',
-							'terms'    => $term_ids,
-							'operator' => 'IN',
-						),
-					),
-					'post_type'      => 'post',
-					'posts_per_page' => '3',
-					'orderby'        => 'rand',
-					'post__not_in'   => array( $post_id ),
-				)
-			);
+			$query = $this->build_related_query();
 
 			if ( ( $query->have_posts() ) ) {
 				$html = '<div class="divinizer_related_posts"><h2 class="divinizer_related_posts_title">';
