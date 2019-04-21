@@ -3,11 +3,14 @@
  * Plugin Name: DIVInizer
  * Plugin URI: http://divi-expand.wp-skill.com/
  * Description: A plugin that adds more functionlity to the Divi theme
- * Version: 1.1.2
- * Author: Faycal Boutam
+ * Version: 1.0.0
+ * Author: Jonathan Bossenger
  * Text Domain: divinizer
  * License: GPLv2 or later
  * @package DIVInizer
+ *
+ * This software is forked from the original [Expand Divi](https://wordpress.org/plugins/expand-divi/) plugin (c) Faycal Boutam
+ * Lightbox functionality forked from [Surbma - Divi Lightbox] (https://wordpress.org/plugins/surbma-divi-lightbox/) plugin (c) Surbma
  */
 
 /* 
