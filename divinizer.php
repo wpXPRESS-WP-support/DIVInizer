@@ -3,7 +3,7 @@
  * Plugin Name: DIVInizer
  * Plugin URI: http://divi-expand.wp-skill.com/
  * Description: A plugin that adds more functionlity to the Divi theme
- * Version: 1.0.0
+ * Version: 0.1.1
  * Author: Jonathan Bossenger
  * Text Domain: divinizer
  * License: GPLv2 or later
@@ -13,7 +13,7 @@
  * Lightbox functionality forked from [Surbma - Divi Lightbox] (https://wordpress.org/plugins/surbma-divi-lightbox/) plugin (c) Surbma
  */
 
-/* 
+/*
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation; either version 3 of the License, or
