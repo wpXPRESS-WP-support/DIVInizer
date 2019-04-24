@@ -90,15 +90,22 @@ class DIVInizerDashboard {
 			],
 		];
 
-		add_action( 'admin_menu', array( $this, 'add_divinizer_menu' ) );
+		add_action( 'admin_menu', array( $this, 'add_divinizer_menu' ), 11 );
 		add_action( 'admin_init', array( $this, 'register_dashboard' ) );
 	}
 
 	public function add_divinizer_menu() {
-		add_submenu_page( 'tools.php', esc_html__( 'DIVInizer', 'divinizer' ), esc_html__( 'DIVInizer', 'divinizer' ), 'manage_options', 'divinizer', array(
-			$this,
-			'divinizer_dashboard_output'
-		) );
+		add_submenu_page(
+			'et_divi_options',
+			esc_html__( 'DIVInizer', 'divinizer' ),
+			esc_html__( 'DIVInizer', 'divinizer' ),
+			'manage_options',
+			'divinizer',
+			array(
+				$this,
+				'divinizer_dashboard_output',
+			)
+		);
 	}
 
 	public function divinizer_dashboard_output() {

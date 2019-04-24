@@ -27,7 +27,7 @@ class DIVInizerSetup {
 	 * @return void
 	 */
 	public function divinizer_register() {
-		add_filter( 'plugin_action_links_divinizer/divinizer.php', array( $this, 'divinizer_add_settings_link' ) );
+		add_filter( 'plugin_action_links_DIVInizer/divinizer.php', array( $this, 'divinizer_add_settings_link' ) );
 
 		add_action( 'admin_enqueue_scripts', array( $this, 'divinizer_enqueue_admin_scripts' ) );
 
@@ -75,7 +75,7 @@ class DIVInizerSetup {
 	 */
 	public function divinizer_add_settings_link( $links ) {
 		$settings = esc_html__( 'Settings', 'divinizer' );
-		$links[]  = '<a href="tools.php?page=divinizer">' . $settings . '</a>';
+		$links[]  = '<a href="admin.php?page=divinizer">' . $settings . '</a>';
 
 		return $links;
 	}
@@ -88,7 +88,7 @@ class DIVInizerSetup {
 	public function divinizer_enqueue_admin_scripts() {
 		$screen = get_current_screen();
 
-		if ( $screen->base === 'tools_page_divinizer' ) {
+		if ( $screen->base === 'divi_page_divinizer' ) {
 			wp_enqueue_style( 'divinizer-admin-styles', DIVINIZER_URL . 'assets/styles/admin-styles.css', array(), null );
 			wp_enqueue_script( 'divinizer-admin-scripts', DIVINIZER_URL . 'assets/scripts/admin-scripts.js', array( 'jquery' ), null );
 			wp_enqueue_script( 'jquery-form' );
