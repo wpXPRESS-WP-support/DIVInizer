@@ -1,25 +1,28 @@
 #divinizer_wrap {
-    background: #fff;
-    margin: 40px 20px;
-    position: relative;
+	background: #fff;
+	margin: 40px 20px;
+	position: relative;
+	box-shadow: 0 5px 30px rgba(0,0,0,.1);
+	border-radius: 3px;
 }
 #divinizer_wrap h1 {
-    background-color: #262734;
-    padding: 20px 30px;
-    font-size: 18px;
-    color: #fff;
+	background-color: #1f999c;
+	padding: 20px 30px;
+	font-size: 18px;
+	color: #fff;
+	border-radius: 3px 3px 0 0;
 }
 .divinizer_sections_wrap {overflow: hidden;}
 .divinizer_sections_wrap h2 {
-    background: #373942;
-    padding: 25px 70px;
-    margin: 0;
-    color: #fff;
-    cursor: pointer;
-    transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -webkit-transition: all 0.3s;
-    box-shadow: 0 1px 15px 1px rgba(3, 3, 3, 0.5);
+	background: #373942;
+	padding: 25px 70px;
+	margin: 0;
+	color: #fff;
+	cursor: pointer;
+	transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	box-shadow: 0 1px 15px 1px rgba(3, 3, 3, 0.5);
 }
 .divinizer_sections_wrap h2:hover,
 .divinizer_sections_wrap h2.selected {background-color: rgba(0, 0, 0, 0.84);}
@@ -32,7 +35,7 @@
 	line-height: 1em;
 	color: #fff;
 	height: 45px;
-	background: #262734;
+	background: #28c6c9;
 	border-color: transparent;
 	box-shadow: none;
 	text-shadow: none;
@@ -48,5 +51,5 @@
 	width: 47px;
 	text-align: center;
 	padding: 34px;
-    box-shadow: rgba(0, 0, 0, .2) 0px 0px 40px;
+	box-shadow: rgba(0, 0, 0, .2) 0px 0px 40px;
 }

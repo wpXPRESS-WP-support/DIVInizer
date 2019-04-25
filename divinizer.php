@@ -3,7 +3,7 @@
  * Plugin Name: DIVInizer
  * Plugin URI: http://divi-expand.wp-skill.com/
  * Description: A plugin that adds more functionlity to the Divi theme
- * Version: 0.1.1
+ * Version: 0.1.2
  * Author: Jonathan Bossenger
  * Text Domain: divinizer
  * License: GPLv2 or later
