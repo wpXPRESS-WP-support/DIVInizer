@@ -62,6 +62,8 @@ class DIVInizerRelatedPosts {
 			)
 		);
 
+		divinizer_debug( 'WP_Query', $query );
+
 		return $query;
 	}
 

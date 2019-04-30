@@ -34,6 +34,30 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+/*
+ * Simple error log
+ */
+function divinizer_debug( $message, $data = '' ) {
+	if ( ! defined( 'DIVINIZER_DEBUG' ) || ! DIVINIZER_DEBUG ) {
+		return;
+	}
+	$log_dir = trailingslashit( plugin_dir_path( __FILE__ ) ) . 'log/';
+	if ( ! is_dir( $log_dir ) ) {
+		mkdir( $log_dir );
+	}
+	$file = $log_dir . date( 'Y-m-d' ) . '.log';
+	if ( ! is_file( $file ) ) {
+		file_put_contents( $file, '' );
+	}
+	if ( ! empty( $data ) ) {
+		$message = array( $message => $data );
+	}
+	$data_string = print_r( $message, true ) . "\n";
+	file_put_contents( $file, $data_string, FILE_APPEND );
+}
+
+define( 'DIVINIZER_DEBUG', true );
+
 // define plugin url constant
 if ( ! defined( 'DIVINIZER_URL' ) ) {
 	define( 'DIVINIZER_URL', plugin_dir_url( __FILE__ ) );
