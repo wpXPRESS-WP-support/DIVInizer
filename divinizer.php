@@ -3,7 +3,7 @@
  * Plugin Name: DIVInizer
  * Plugin URI: http://divi-expand.wp-skill.com/
  * Description: A plugin that adds more functionlity to the Divi theme
- * Version: 0.1.2
+ * Version: 0.1.3
  * Author: Jonathan Bossenger
  * Text Domain: divinizer
  * License: GPLv2 or later
@@ -33,30 +33,6 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-
-/*
- * Simple error log
- */
-function divinizer_debug( $message, $data = '' ) {
-	if ( ! defined( 'DIVINIZER_DEBUG' ) || ! DIVINIZER_DEBUG ) {
-		return;
-	}
-	$log_dir = trailingslashit( plugin_dir_path( __FILE__ ) ) . 'log/';
-	if ( ! is_dir( $log_dir ) ) {
-		mkdir( $log_dir );
-	}
-	$file = $log_dir . date( 'Y-m-d' ) . '.log';
-	if ( ! is_file( $file ) ) {
-		file_put_contents( $file, '' );
-	}
-	if ( ! empty( $data ) ) {
-		$message = array( $message => $data );
-	}
-	$data_string = print_r( $message, true ) . "\n";
-	file_put_contents( $file, $data_string, FILE_APPEND );
-}
-
-define( 'DIVINIZER_DEBUG', true );
 
 // define plugin url constant
 if ( ! defined( 'DIVINIZER_URL' ) ) {

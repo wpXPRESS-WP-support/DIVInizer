@@ -13,14 +13,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 class DIVInizerRelatedPosts {
 
-	private $type = array();
+	private $type = '';
 
 	/**
 	 * constructor
 	 */
 	public function __construct() {
-		$options    = get_option( 'divinizer' );
-		$this->type = $options['enable_related_posts'];
+		$options = get_option( 'divinizer' );
+		// Checking against integers because the options are saved from the field select array keys, not the values
+		// 1 = Tags and 2 = Categories
+		$this->type = ( 2 === intval( $options['enable_related_posts'] ) ) ? 'categories' : 'tags';
 		add_filter( 'the_content', array( $this, 'divinizer_output_related_posts' ) );
 	}
 
@@ -31,7 +33,7 @@ class DIVInizerRelatedPosts {
 	 */
 	public function build_related_query() {
 		$taxonomy = 'post_tag';
-		if ( 'Categories' === $this->type ) {
+		if ( 'categories' === $this->type ) {
 			$taxonomy = 'category';
 		}
 
@@ -61,8 +63,6 @@ class DIVInizerRelatedPosts {
 				'post__not_in'   => array( $post_id ),
 			)
 		);
-
-		divinizer_debug( 'WP_Query', $query );
 
 		return $query;
 	}
@@ -94,7 +94,6 @@ class DIVInizerRelatedPosts {
 					$html .= '">';
 					$html .= get_the_title();
 					$html .= '</a></h4></div>';
-
 				}
 
 				$html .= '</div>';
