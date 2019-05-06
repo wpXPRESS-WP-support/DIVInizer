@@ -1,5 +1,5 @@
 === DIVInizer ===
-Contributors: wordxpress1, tevyaw, psykro, faycalboutam, surbma
+Contributors: wordxpress1, psykro, tevyaw, faycalboutam, surbma
 Donate link: https://paypal.me/fiddler
 Tags: Divi, related posts, post author box, lightbox, remove sidebar
 Requires at least: 4.9
@@ -12,7 +12,7 @@ Adds related posts, author boxes, the Divi lighbox, and much more, to the Divi t
 
 == Description ==
 
-= Divi Theme Improvements for Bloggers! =
+= Divi Theme Enhancements Outside the Builder =
 
 DIVInizer by [WordXpress](https://wordx.press) makes the Divi by ElegantThemes theme better for bloggers and other users who don't use the Divi Builder on posts. It allows you to set options for all non-Divi Builder posts (and some for pages). This includes: related posts similar to Extra theme, an Author Box displaying the author's Gravatar and bio at the end of each post, removing the sidebar, and automatically using Divi's lightbox to display images, changing the archive pages to a Grid style, and more!
 
