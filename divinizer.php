@@ -1,10 +1,11 @@
 <?php
 /**
  * Plugin Name: DIVInizer
- * Plugin URI: http://divi-expand.wp-skill.com/
- * Description: A plugin that adds more functionlity to the Divi theme
+ * Plugin URI: https://wordx.press/divinizer
+ * Description: Adds related posts, author boxes, the Divi lighbox, and much more, to the Divi theme by Elegant Themes.
  * Version: 0.1.3
- * Author: Jonathan Bossenger
+ * Author: WordXpress
+ * Author URI: https://wordx.press/
  * Text Domain: divinizer
  * License: GPLv2 or later
  * @package DIVInizer
