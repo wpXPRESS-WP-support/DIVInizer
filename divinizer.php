@@ -1,10 +1,10 @@
 <?php
 /**
  * Plugin Name: DIVInizer
- * Plugin URI: http://divi-expand.wp-skill.com/
- * Description: A plugin that adds more functionlity to the Divi theme
- * Version: 0.1.3
- * Author: Jonathan Bossenger
+ * Plugin URI: https://wordx.press/
+ * Description: A plugin that adds more functionality to the Divi theme
+ * Version: 1.0
+ * Author: WordXpress
  * Text Domain: divinizer
  * License: GPLv2 or later
  * @package DIVInizer

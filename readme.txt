@@ -4,7 +4,7 @@ Donate link: https://paypal.me/fiddler
 Tags: Divi, related posts, post author box, lightbox, remove sidebar
 Requires at least: 4.9
 Tested up to: 5.2
-Stable tag: 0.1.3
+Stable tag: 1.0
 Requires PHP: 5.6
 License: GPLv2 or later
 
@@ -18,7 +18,7 @@ DIVInizer by [WordXpress](https://wordx.press) makes the Divi by ElegantThemes t
 
 = DIVInizer's Story =
 
-At **WordXpress** we support and maintain a lot of WordPress websites including *many* using the Divi theme. We love Divi! But for writing posts, the Divi Builder is way overkill for most blogging. If you're doing advanced, complex stories with lots of fancy formatting and interactive features, it's wonderful. Most of us just want to write, insert a few images and links, and publish! 
+At **WordXpress** we support and maintain a lot of WordPress websites including *many* using the Divi theme. We love Divi! But for writing posts, the Divi Builder is way overkill for most blogging. If you're doing advanced, complex stories with lots of fancy formatting and interactive features, it's wonderful. Most of us just want to write, insert a few images and links, and publish!
 
 I found the Expand Divi plugin and was very excited about what it could do for us. However, it had a few shortcomings, including using only tags to calculate related posts. We don't use tags on our blog, so the related posts didn't work! I reached out to the plugin's developer Faycal, and asked if we could fork his plugin and create our own version? He was very supportive, so we combined it with some other stuff we'd been working on and viola! DIVInizer was born, with category-based related posts, automatic lightboxing of images, and more.
 
@@ -53,7 +53,7 @@ DIVInizer requires the [Divi theme](https://www.elegantthemes.com/gallery/divi/)
 Definitely! Customize the look by adding custom CSS under Divi > Theme Options > General > Custom CSS. In your dev tools look for classes that have "divinizer" at the beginning to target features added by DIVInizer plugin.
 
 = Can you install DIVInizer and/or customize its design for me? =
-If you'd like to have your WordPress website professionally supported and maintained, that's what we do at [WordXpress](https://wordx.press). Our plans include things like installing and configuring DIVInizer, customizing its design to match your site. 
+If you'd like to have your WordPress website professionally supported and maintained, that's what we do at [WordXpress](https://wordx.press). Our plans include things like installing and configuring DIVInizer, customizing its design to match your site.
 
 Plus we include tons of other stuff like adding/updating content on your site, improving speed, security, backups, and safe updates. We even give you access to thousands of dollars worth of premium plugins (on our Boxcar and above plans). If this is interesting to you, check out [our plans](https://wordx.press/wp-support-plans/) and sign up today! We'd love to help you with DIVInizer, Divi Theme, and *much* more.
 
