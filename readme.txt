@@ -1,60 +1,76 @@
-﻿=== DIVInizer ===
-Contributors: wordxpress1, rogejr, tevyaw, cha01, faycalboutam
-Donate link: https://paypal.me/fiddler  
-Tags: Divi, Divinizer, options, widgets, posts 
+=== DIVInizer ===
+Contributors: wordxpress1, psykro, tevyaw, faycalboutam, surbma
+Donate link: https://paypal.me/fiddler
+Tags: Divi, related posts, post author box, lightbox, remove sidebar
 Requires at least: 4.9
 Tested up to: 5.2
 Stable tag: 1.0
 Requires PHP: 5.6
-License: GPLv2 or later  
+License: GPLv2 or later
 
-Adds more functionlity to the Divi theme by Elegant Themes
+Adds related posts, author boxes, the Divi lighbox, and much more, to the Divi theme by Elegant Themes.
 
 == Description ==
-DIVInize is easy to use, simply install and activate the plugin, go to DIVInize Dashboard and enable the options that you’d like to have, easy one click options!
 
-## Options
-[Demo for all options](http://divi-expand.wp-skill.com/index.php/2017/04/02/lorem-ipsum-dolor-sit-amet-adipiscing-6/)
-### Author Box : 
-Add an about-author box below all posts with a single click!
-### Single Post Pagination : 
-With one click, add a pagination to navigate between posts.
-### Single Post Tags : 
-Display post tags below content or within the post meta.
-### Related Posts : 
-Force your readers to stay by showing them your related posts after the post content.
-### Archive Blog Style : 
-Change your index, categories and all archive blog pages to grid layout with one small click! [Demo.](http://divi-expand.wp-skill.com/index.php/category/archive/)
-### Pre-Loader : 
-You can have a nice animated loader spinning while your page is being loaded.
-### Sidebar Removal : 
-Get ride of the sidebar globally, on archive or single posts pages.
-### Recent Posts Widget : 
-Show any amount of latest posts in the sidebar, custom post types are supported! [Doc.](http://divi-expand.wp-skill.com/index.php/recent-posts-widget/)
-### Twitter Feed Widget : 
-Display x number of your latest tweets in your sidebar [Doc.](http://divi-expand.wp-skill.com/index.php/twitter-widget/)
-### Font Awesome : 
-Enable and use one of the best icons font libraries on the web, inline with your  text!
+= Divi Theme Enhancements Outside the Builder =
 
-== Installation ==
-1. Upload the plugin files to the `/wp-content/plugins/` directory, or install the plugin through the WordPress plugins screen directly.
-2. Activate the plugin through the 'Plugins' screen in WordPress
-3. Use the Settings->Tools-> DIVInize screen to configure the plugin
+DIVInizer by [WordXpress](https://wordx.press) makes the Divi by ElegantThemes theme better for bloggers and other users who don't use the Divi Builder on posts. It allows you to set options for all non-Divi Builder posts (and some for pages). This includes: related posts similar to Extra theme, an Author Box displaying the author's Gravatar and bio at the end of each post, removing the sidebar, and automatically using Divi's lightbox to display images, changing the archive pages to a Grid style, and more!
+
+= DIVInizer's Story =
+
+At **WordXpress** we support and maintain a lot of WordPress websites including *many* using the Divi theme. We love Divi! But for writing posts, the Divi Builder is way overkill for most blogging. If you're doing advanced, complex stories with lots of fancy formatting and interactive features, it's wonderful. Most of us just want to write, insert a few images and links, and publish!
+
+I found the Expand Divi plugin and was very excited about what it could do for us. However, it had a few shortcomings, including using only tags to calculate related posts. We don't use tags on our blog, so the related posts didn't work! I reached out to the plugin's developer Faycal, and asked if we could fork his plugin and create our own version? He was very supportive, so we combined it with some other stuff we'd been working on and viola! DIVInizer was born, with category-based related posts, automatic lightboxing of images, and more.
+
+If you're like us and want to "just write," we created DIVInizer for you. We don't use Divi Builder for posts, and neither do most of our [members](https://wordx.press/wp-support-plans/). So we created this plugin to make the Divi blog a little more blogger-firendly by bringing some much-needed features from Extra and elsewhere to Divi.
+
+= Features =
+
+* **Author Box** Add an about-author box below all posts with this setting.
+* **Single Post Pagination** Add pagination to navigate between posts.
+* **Related Posts** Encourage readers to stay by showing them other interesting content at the end of each post. Options to select related content based on tags or categories.
+* **Post Tags** Display post tags in the post meta (Divi only shows categories by default), or at the bottom of posts.
+* **Lightbox** Open images in the Divi lightbox, when links to images are clicked in posts and pages not using the Divi Builder.
+* **Archive Blog Style** Change your index, categories, and all archive blog pages to grid layout.
+* **Remove Sidebar** Remove of the sidebar globally, on archive, or single posts pages.
+* **Recent Posts Widget** Show any amount of latest posts in the sidebar, custom post types are supported.
+* **Twitter Feed Widget** Display any number of your latest tweets in your sidebar.
+
+= Requirements =
+
+DIVInizer requires the [Divi theme](https://www.elegantthemes.com/gallery/divi/). It may work with the Divi Builder plugin and Extra theme, but is not tested with those at this time.
 
 == Screenshots ==
-1. Admin dashboard.
-2. Widgets in footer area.
-3. Widgets in sidebar.
-4. About author, tags, related posts and pagination options.
-5. Tags above content.
+
+1. Author box and related posts.
+2. DIVInizer options.
+3. Image in Divi lightbox.
+4. Post with sidebar removed.
+
+== Frequently Asked Questions ==
+
+= Can I change the way it looks? =
+Definitely! Customize the look by adding custom CSS under Divi > Theme Options > General > Custom CSS. In your dev tools look for classes that have "divinizer" at the beginning to target features added by DIVInizer plugin.
+
+= Can you install DIVInizer and/or customize its design for me? =
+If you'd like to have your WordPress website professionally supported and maintained, that's what we do at [WordXpress](https://wordx.press). Our plans include things like installing and configuring DIVInizer, customizing its design to match your site.
+
+Plus we include tons of other stuff like adding/updating content on your site, improving speed, security, backups, and safe updates. We even give you access to thousands of dollars worth of premium plugins (on our Boxcar and above plans). If this is interesting to you, check out [our plans](https://wordx.press/wp-support-plans/) and sign up today! We'd love to help you with DIVInizer, Divi Theme, and *much* more.
+
+== Installation ==
+
+1. Upload the plugin files to the `/wp-content/plugins/` directory, or install the plugin through the Plugins > Add New page by searching "divinizer".
+2. Activate the plugin.
+3. Go to Divi > DIVInizer to turn on features.
 
 == Credits ==
+
 * [Expand Divi](https://wordpress.org/plugins/expand-divi/)
 * [Surbma - Divi Lightbox] (https://wordpress.org/plugins/surbma-divi-lightbox/)
 * [Divi-Lightbox-for-Jetpack-Tiled-Galleries](https://github.com/s-a-s-k-i-a/Divi-Lightbox-for-Jetpack-Tiled-Galleries)
 * [TwitterOAuth Library](https://github.com/abraham/twitteroauth/releases/tag/0.7.4)
-* [Font Awesome](http://fontawesome.io/)
 
 == Changelog ==
+
 ### 1.0
 * initial release.

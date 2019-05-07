@@ -1,9 +1,9 @@
 <?php
 /**
- * DIVInize Archive Blog Styles
+ * DIVInizer Archive Blog Styles
  * adds blog styles to the arrchive pages
  *
- * @package  DIVInize/DivinizeArchiveBlogStyles
+ * @package  DIVInizer/DIVInizerArchiveBlogStyles
  */
 
 // exit when accessed directly
@@ -11,13 +11,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class DivinizeArchiveBlogStyles {
+class DIVInizerArchiveBlogStyles {
 
 	/**
 	 * constructor
 	 */
 	function __construct() {
-		add_filter( 'body_class', array( $this, 'divinize_add_style_class' ) );	
+		add_filter( 'body_class', array( $this, 'divinizer_add_style_class' ) );	
 	}
 
 	/**
@@ -25,14 +25,14 @@ class DivinizeArchiveBlogStyles {
 	 *
 	 * @return array
 	 */
-	function divinize_add_style_class( $classes ) {
+	function divinizer_add_style_class( $classes ) {
 
 		if ( is_category() || is_tag() || is_author() || is_search() || ( ! is_front_page() && is_home() ) ) {
-			$classes[] = 'divinize-blog-grid';
+			$classes[] = 'divinizer-blog-grid';
 		}
 
     	return $classes;
 	}
 }
 
-new DivinizeArchiveBlogStyles();
+new DIVInizerArchiveBlogStyles();

@@ -1,16 +1,19 @@
 <?php
 /**
- * Plugin Name: DIVInize
- * Plugin URI: https://wordx.pres/divinize/
- * Description: Adds more functionality to Divi Theme
+ * Plugin Name: DIVInizer
+ * Plugin URI: https://wordx.press/
+ * Description: A plugin that adds more functionality to the Divi theme
  * Version: 1.0
  * Author: WordXpress
- * Text Domain: DIVInize
+ * Text Domain: divinizer
  * License: GPLv2 or later
- * @package DIVInize
+ * @package DIVInizer
+ *
+ * This software is forked from the original [Expand Divi](https://wordpress.org/plugins/expand-divi/) plugin (c) Faycal Boutam
+ * Lightbox functionality forked from [Surbma - Divi Lightbox] (https://wordpress.org/plugins/surbma-divi-lightbox/) plugin (c) Surbma
  */
 
-/* 
+/*
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation; either version 3 of the License, or
@@ -32,20 +35,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // define plugin url constant
-if ( ! defined( 'DIVINIZE_URL' ) ) {
-	define( 'DIVINIZE_URL', plugin_dir_url( __FILE__ ) );
+if ( ! defined( 'DIVINIZER_URL' ) ) {
+	define( 'DIVINIZER_URL', plugin_dir_url( __FILE__ ) );
 }
 
 // define plugin path constant
-if ( ! defined( 'DIVINIZE_PATH' ) ) {
-	define( 'DIVINIZE_PATH', plugin_dir_path( __FILE__ ) );
+if ( ! defined( 'DIVINIZER_PATH' ) ) {
+	define( 'DIVINIZER_PATH', plugin_dir_path( __FILE__ ) );
 }
 
 // require setup class
-require_once( DIVINIZE_PATH . 'inc/DIVInizeSetup.php' );
+require_once DIVINIZER_PATH . 'inc/DIVInizerSetup.php';
 
 // localization
-function divinize_localization() {
-	load_plugin_textdomain( 'divinize', false, dirname( plugin_basename( __FILE__ ) ) . '/lang' );
+function divinizer_localization() {
+	load_plugin_textdomain( 'divinizer', false, dirname( plugin_basename( __FILE__ ) ) . '/lang' );
 }
-add_action('init', 'divinize_localization');
+
+add_action( 'init', 'divinizer_localization' );

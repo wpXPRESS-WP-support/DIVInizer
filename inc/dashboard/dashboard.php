@@ -1,195 +1,208 @@
-<?php 
+<?php
 /**
- * DIVInize Dashboard
+ * DIVInizer Dashboard
  * Setup dashboard sections and fields
  *
- * @package  DivinizeDashboard
+ * @package  DIVInizerDashboard
  */
 
 // exit when accessed directly
 if ( ! defined( 'ABSPATH' ) ) {
-    exit;
+	exit;
 }
 
-class DivinizeDashboard {
-    private $divinize_sections;
-    private $divinize_fields;
+class DIVInizerDashboard {
+	private $divinizer_sections;
+	private $divinizer_fields;
 
-    function __construct() {
-        // the sections array
-        $this->divinize_sections = [
-            'general' => [
-                'title' => ''
-            ]
-        ];
+	public function __construct() {
+		// the sections array
+		$this->divinizer_sections = [
+			'general' => [
+				'title' => '',
+			],
+		];
 
-        // the fields array
-        $this->divinize_fields = [
-            'enable_preloader' => [
-                'title'    => 'Pre-loader',
-                'type'     => 'select',
-                'section'  => 'general', 
-                'default'  => 0,
-                'children' => ['Disabled', 'Enabled']
-            ], 
-            'enable_fontawesome' => [
-                'title'    => 'Fontawesome',
-                'type'     => 'select',
-                'section'  => 'general', 
-                'default'  => 0,
-                'children' => ['Disabled', 'Enabled']
-            ],           
-            'enable_author_box' => [
-                'title'    => 'Author Box',
-                'type'     => 'select',
-                'section'  => 'general', 
-                'default'  => 0,
-                'children' => ['Disabled', 'Enabled']
-            ],
-            'enable_single_post_pagination' => [
-                'title'    => 'Single Post Pagination',
-                'type'     => 'select',
-                'section'  => 'general', 
-                'default'  => 0,
-                'children' => ['Disabled', 'Enabled']
-            ],
-            'enable_related_posts' => [
-                'title'    => 'Related Posts',
-                'type'     => 'select',
-                'section'  => 'general', 
-                'default'  => 0,
-                'children' => ['Disabled', 'Enabled']
-            ],
-            'enable_post_tags' => [
-                'title'    => 'Post Tags',
-                'type'     => 'select',
-                'section'  => 'general', 
-                'default'  => 0,
-                'children' => ['Disabled', 'Above Content', 'Below Content']
-            ],
-            'enable_archive_blog_styles' => [
-                'title'    => 'Archive Blog Styles',
-                'type'     => 'select',
-                'section'  => 'general', 
-                'default'  => 0,
-                'children' => ['Disabled', 'Grid']
-            ],
-            'enable_lightbox' => [
-                'title'    => 'Lightbox',
-                'type'     => 'select',
-                'section'  => 'general', 
-                'default'  => 0,
-                'children' => ['Disabled', 'Enabled']
-            ],
-            'remove_sidebar' => [
-                'title'    => 'Remove Sidebar',
-                'type'     => 'select',
-                'section'  => 'general', 
-                'default'  => 0,
-                'children' => ['Disabled', 'Globally', 'Posts Only', 'Archive Pages Only']
-            ]
-        ];
+		// the fields array
+		$this->divinizer_fields = [
+			'enable_preloader'              => [
+				'title'    => 'Pre-loader',
+				'type'     => 'select',
+				'section'  => 'general',
+				'default'  => 0,
+				'children' => [ 'Disabled', 'Enabled' ],
+			],
+			'enable_fontawesome'            => [
+				'title'    => 'Fontawesome',
+				'type'     => 'select',
+				'section'  => 'general',
+				'default'  => 0,
+				'children' => [ 'Disabled', 'Enabled' ],
+			],
+			'enable_author_box'             => [
+				'title'    => 'Author Box',
+				'type'     => 'select',
+				'section'  => 'general',
+				'default'  => 0,
+				'children' => [ 'Disabled', 'Enabled' ],
+			],
+			'enable_single_post_pagination' => [
+				'title'    => 'Single Post Pagination',
+				'type'     => 'select',
+				'section'  => 'general',
+				'default'  => 0,
+				'children' => [ 'Disabled', 'Enabled' ],
+			],
+			'enable_related_posts'          => [
+				'title'    => 'Related Posts',
+				'type'     => 'select',
+				'section'  => 'general',
+				'default'  => 0,
+				'children' => [ 'Disabled', 'Tags', 'Categories' ],
+			],
+			'enable_post_tags'              => [
+				'title'    => 'Post Tags',
+				'type'     => 'select',
+				'section'  => 'general',
+				'default'  => 0,
+				'children' => [ 'Disabled', 'Above Content', 'Below Content' ],
+			],
+			'enable_lightbox_everywhere'    => [
+				'title'    => 'Lightbox for posts and pages',
+				'type'     => 'select',
+				'section'  => 'general',
+				'default'  => 0,
+				'children' => [ 'Disabled', 'Enabled' ],
+			],
+			'enable_archive_blog_styles'    => [
+				'title'    => 'Archive Blog Styles',
+				'type'     => 'select',
+				'section'  => 'general',
+				'default'  => 0,
+				'children' => [ 'Disabled', 'Grid' ],
+			],
+			'remove_sidebar'                => [
+				'title'    => 'Remove Sidebar',
+				'type'     => 'select',
+				'section'  => 'general',
+				'default'  => 0,
+				'children' => [ 'Disabled', 'Globally', 'Posts Only', 'Archive Pages Only' ],
+			],
+		];
 
-        add_action( 'admin_menu', array( $this, 'add_divinize_menu' ) );
-        add_action( 'admin_init', array( $this, 'register_dashboard' ) );
-    }
+		add_action( 'admin_menu', array( $this, 'add_divinizer_menu' ), 11 );
+		add_action( 'admin_init', array( $this, 'register_dashboard' ) );
+	}
 
-    function add_divinize_menu() {
-        add_submenu_page( 'et_divi_options', esc_html__( 'DIVInize', 'divinize' ), esc_html__( 'DIVInize', 'divinize' ), 'manage_options', 'divinize', array( $this, 'divinize_dashboard_output' ) );
-    }
-    
-    function divinize_dashboard_output() {
-        // check if the user is admin
-        //if ( ! current_user_can('manage_options') ) {
-            //wp_die( esc_html__( 'You do not have permission to access this page!', 'divinize' ) );
-        //} ?>
+	public function add_divinizer_menu() {
+		add_submenu_page(
+			'et_divi_options',
+			esc_html__( 'DIVInizer', 'divinizer' ),
+			esc_html__( 'DIVInizer', 'divinizer' ),
+			'manage_options',
+			'divinizer',
+			array(
+				$this,
+				'divinizer_dashboard_output',
+			)
+		);
+	}
 
-        <!-- dashboard interface -->
-        <div id="divinize_wrap">
-            <h1><?php esc_html_e( 'DIVInize Options', 'divinize' ); ?></h1>
-            <p>These settings are applied to posts and pages outside the Divi builder</p>
-            <?php settings_errors(); ?>
+	public function divinizer_dashboard_output() {
+		// check if the user is admin
+		if ( ! current_user_can( 'manage_options' ) ) {
+			wp_die( esc_html__( 'You do not have permission to access this page!', 'divinizer' ) );
+		} ?>
 
-            <form method="post" action="options.php" id="divinize_form">
-                <div class="divinize_sections_wrap">
-                <?php
-                    settings_fields( 'divinize' );
-                    do_settings_sections( 'divinize' );
-                ?>
-                </div>
-                <?php submit_button(); ?>
-                <div id="divinize_save"></div>
+		<!-- dashboard interface -->
+		<div id="divinizer_wrap">
+			<h1><?php esc_html_e( 'DIVInizer Options', 'divinizer' ); ?></h1>
+			<?php settings_errors(); ?>
 
-            </form>
-        </div>
-    <?php
-    }
+			<form method="post" action="options.php" id="divinizer_form">
+				<div class="divinizer_sections_wrap">
+					<?php
+					settings_fields( 'divinizer' );
+					do_settings_sections( 'divinizer' );
+					?>
+				</div>
+				<?php submit_button(); ?>
+				<div id="divinizer_save"></div>
 
-    function register_dashboard() {
-        register_setting( 'divinize', 'divinize', 'divinize_dashboard_validate' );
+			</form>
+		</div>
+		<?php
+	}
 
-        foreach ($this->divinize_sections as $id => $value) {
-            add_settings_section( $id, $value['title'], array($this, 'divinize_section_callback'), 'divinize');
-        }
+	public function register_dashboard() {
+		register_setting( 'divinizer', 'divinizer', 'divinizer_dashboard_validate' );
 
-        foreach ($this->divinize_fields as $id => $value) {
-            add_settings_field( $id, esc_html__( $value['title'], 'divinize' ), array($this, 'divinize_field_callback'), 'divinize', $value['section'], $id );
-        }
-    }
+		foreach ( $this->divinizer_sections as $id => $value ) {
+			add_settings_section( $id, $value['title'], array( $this, 'divinizer_section_callback' ), 'divinizer' );
+		}
 
-    function divinize_dashboard_validate( $input ) {
-        $output = [];
+		foreach ( $this->divinizer_fields as $id => $value ) {
+			add_settings_field( $id, esc_html__( $value['title'], 'divinizer' ), array(
+				$this,
+				'divinizer_field_callback'
+			), 'divinizer', $value['section'], $id );
+		}
+	}
 
-        foreach ( $input as $key => $value ) {
-            $field_sanitize = de_field_sanitize( $key );
-            
-            switch ( $field_sanitize ) {
-                case 'default':
-                    $output[ $key ] = strip_tags( stripslashes( $input[ $key ] ) );
-                break;
-                case 'full':
-                    $output[ $key ] = esc_url_raw( strip_tags( stripslashes( $input[ $key ] ) ) ); 
-                break;
-                default:
-                    $output[ $key ] = $input[ $key ];
-                break;
-            }
-        }
-        return $output;
-    }
+	public function divinizer_dashboard_validate( $input ) {
+		$output = [];
 
-    function divinize_field_sanitize( $key ) {
-        return $this->divinize_fields[ $key ]['sanitize'];
-    }
+		foreach ( $input as $key => $value ) {
+			$field_sanitize = de_field_sanitize( $key );
 
-    // callback of add_settings_section()
-    function divinize_section_callback( $args ) {
-        return null;
-    }
+			switch ( $field_sanitize ) {
+				case 'default':
+					$output[ $key ] = strip_tags( stripslashes( $input[ $key ] ) );
+					break;
+				case 'full':
+					$output[ $key ] = esc_url_raw( strip_tags( stripslashes( $input[ $key ] ) ) );
+					break;
+				default:
+					$output[ $key ] = $input[ $key ];
+					break;
+			}
+		}
 
-    // set the field's default value, used when no value is retrieved from DB
-    function divinize_default_id( $id ) {
-        return $this->divinize_fields[ $id ]['default'];
-    }
+		return $output;
+	}
 
-    // callback of add_settings_field(), outputs the fields
-    function divinize_field_callback( $id ) {
-        $option = get_option( 'divinize' );
-        $id_field = isset( $option[ $id ] ) ? $option[ $id ] : $this->divinize_default_id( $id );
-        
-        // output the field HTML according to de_field type
-        switch ( $this->divinize_fields[ $id ]['type'] ) {
-            case 'select':
-                echo '<select name="divinize[' . $id . ']">';
-                for ( $i = 0; $i < sizeof( $this->divinize_fields[ $id ]['children'] ); $i++ ) {
-                    echo "<option value='" . $i ."' " . selected( $id_field, $i, false ) . ">";
-                    esc_html_e( $this->divinize_fields[ $id ]['children'][ $i ], 'divinize' );
-                    echo "</option>";
-                }
-                echo '</select>';
-            break;
-        }
-    }
+	public function divinizer_field_sanitize( $key ) {
+		return $this->divinizer_fields[ $key ]['sanitize'];
+	}
+
+	// callback of add_settings_section()
+	public function divinizer_section_callback( $args ) {
+		return null;
+	}
+
+	// set the field's default value, used when no value is retrieved from DB
+	public function divinizer_default_id( $id ) {
+		return $this->divinizer_fields[ $id ]['default'];
+	}
+
+	// callback of add_settings_field(), outputs the fields
+	public function divinizer_field_callback( $id ) {
+		$option   = get_option( 'divinizer' );
+		$id_field = isset( $option[ $id ] ) ? $option[ $id ] : $this->divinizer_default_id( $id );
+
+		// output the field HTML according to de_field type
+		switch ( $this->divinizer_fields[ $id ]['type'] ) {
+			case 'select':
+				echo '<select name="divinizer[' . $id . ']">';
+				for ( $i = 0; $i < sizeof( $this->divinizer_fields[ $id ]['children'] ); $i ++ ) {
+					echo "<option value='" . $i . "' " . selected( $id_field, $i, false ) . ">";
+					esc_html_e( $this->divinizer_fields[ $id ]['children'][ $i ], 'divinizer' );
+					echo "</option>";
+				}
+				echo '</select>';
+				break;
+		}
+	}
 }
 
-new DivinizeDashboard();
+new DIVInizerDashboard();
