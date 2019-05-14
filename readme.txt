@@ -1,4 +1,4 @@
-=== DIVInizer ===
+=== ET Divinizer ===
 Contributors: wordxpress1, psykro, tevyaw, faycalboutam, surbma
 Donate link: https://paypal.me/fiddler
 Tags: Divi, related posts, post author box, lightbox, remove sidebar
@@ -14,15 +14,17 @@ Adds related posts, author boxes, the Divi lighbox, and much more, to the Divi t
 
 = Divi Theme Enhancements Outside the Builder =
 
-DIVInizer by [WordXpress](https://wordx.press) makes the Divi by ElegantThemes theme better for bloggers and other users who don't use the Divi Builder on posts. It allows you to set options for all non-Divi Builder posts (and some for pages). This includes: related posts similar to Extra theme, an Author Box displaying the author's Gravatar and bio at the end of each post, removing the sidebar, and automatically using Divi's lightbox to display images, changing the archive pages to a Grid style, and more!
+ET Divinizer by [WordXpress](https://wordx.press) makes the Divi by ElegantThemes theme better for bloggers and other users who don't use the Divi Builder on posts. It allows you to set options for all non-Divi Builder posts (and some for pages). This includes: related posts similar to Extra theme, an Author Box displaying the author's Gravatar and bio at the end of each post, removing the sidebar, and automatically using Divi's lightbox to display images, changing the archive pages to a Grid style, and more!
 
-= DIVInizer's Story =
+[Divi](https://www.elegantthemes.com/gallery/divi/) is a registered trademark of Elegant Themes, Inc. This product is not affiliated with nor endorsed by [Elegant Themes](https://www.elegantthemes.com).
+
+= ET Divinizer's Story =
 
 At **WordXpress** we support and maintain a lot of WordPress websites including *many* using the Divi theme. We love Divi! But for writing posts, the Divi Builder is way overkill for most blogging. If you're doing advanced, complex stories with lots of fancy formatting and interactive features, it's wonderful. Most of us just want to write, insert a few images and links, and publish!
 
-I found the Expand Divi plugin and was very excited about what it could do for us. However, it had a few shortcomings, including using only tags to calculate related posts. We don't use tags on our blog, so the related posts didn't work! I reached out to the plugin's developer Faycal, and asked if we could fork his plugin and create our own version? He was very supportive, so we combined it with some other stuff we'd been working on and viola! DIVInizer was born, with category-based related posts, automatic lightboxing of images, and more.
+I found the Expand Divi plugin and was very excited about what it could do for us. However, it had a few shortcomings, including using only tags to calculate related posts. We don't use tags on our blog, so the related posts didn't work! I reached out to the plugin's developer Faycal, and asked if we could fork his plugin and create our own version? He was very supportive, so we combined it with some other stuff we'd been working on and viola! ET Divinizer was born, with category-based related posts, automatic lightboxing of images, and more.
 
-If you're like us and want to "just write," we created DIVInizer for you. We don't use Divi Builder for posts, and neither do most of our [members](https://wordx.press/wp-support-plans/). So we created this plugin to make the Divi blog a little more blogger-firendly by bringing some much-needed features from Extra and elsewhere to Divi.
+If you're like us and want to "just write," we created ET Divinizer for you. We don't use Divi Builder for posts, and neither do most of our [members](https://wordx.press/wp-support-plans/). So we created this plugin to make the Divi blog a little more blogger-firendly by bringing some much-needed features from Extra and elsewhere to Divi.
 
 = Features =
 
@@ -38,28 +40,28 @@ If you're like us and want to "just write," we created DIVInizer for you. We don
 
 = Requirements =
 
-DIVInizer requires the [Divi theme](https://www.elegantthemes.com/gallery/divi/). It may work with the Divi Builder plugin and Extra theme, but is not tested with those at this time.
+ET Divinizer requires the [Divi theme](https://www.elegantthemes.com/gallery/divi/). It may work with the Divi Builder plugin and Extra theme, but is not tested with those at this time.
 
 == Screenshots ==
 
 1. Author box and related posts.
-2. DIVInizer options.
+2. ET Divinizer options.
 3. Image in Divi lightbox.
 4. Post with sidebar removed.
 
 == Frequently Asked Questions ==
 
 = Can I change the way it looks? =
-Definitely! Customize the look by adding custom CSS under Divi > Theme Options > General > Custom CSS. In your dev tools look for classes that have "divinizer" at the beginning to target features added by DIVInizer plugin.
+Definitely! Customize the look by adding custom CSS under Divi > Theme Options > General > Custom CSS. In your dev tools look for classes that have "divinizer" at the beginning to target features added by ET Divinizer plugin.
 
-= Can you install DIVInizer and/or customize its design for me? =
-If you'd like to have your WordPress website professionally supported and maintained, that's what we do at [WordXpress](https://wordx.press). Our plans include things like installing and configuring DIVInizer, customizing its design to match your site.
+= Can you install ET Divinizer and/or customize its design for me? =
+If you'd like to have your WordPress website professionally supported and maintained, that's what we do at [WordXpress](https://wordx.press). Our plans include things like installing and configuring ET Divinizer, customizing its design to match your site.
 
-Plus we include tons of other stuff like adding/updating content on your site, improving speed, security, backups, and safe updates. We even give you access to thousands of dollars worth of premium plugins (on our Boxcar and above plans). If this is interesting to you, check out [our plans](https://wordx.press/wp-support-plans/) and sign up today! We'd love to help you with DIVInizer, Divi Theme, and *much* more.
+Plus we include tons of other stuff like adding/updating content on your site, improving speed, security, backups, and safe updates. We even give you access to thousands of dollars worth of premium plugins (on our Boxcar and above plans). If this is interesting to you, check out [our plans](https://wordx.press/wp-support-plans/) and sign up today! We'd love to help you with ET Divinizer, Divi Theme, and *much* more.
 
 == Installation ==
 
-1. Upload the plugin files to the `/wp-content/plugins/` directory, or install the plugin through the Plugins > Add New page by searching "divinizer".
+1. Upload the plugin files to the `/wp-content/plugins/` directory, or install the plugin through the Plugins > Add New page by searching "et divinizer".
 2. Activate the plugin.
 3. Go to Divi > DIVInizer to turn on features.
 
