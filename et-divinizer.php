@@ -5,6 +5,7 @@
  * Description: A plugin that adds more functionality to the Divi theme
  * Version: 1.0
  * Author: WordXpress
+ * Author URI: https://wordx.press/
  * Text Domain: divinizer
  * License: GPLv2 or later
  * @package DIVInizer
