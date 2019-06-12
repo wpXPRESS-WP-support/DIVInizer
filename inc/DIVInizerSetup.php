@@ -65,7 +65,9 @@ class DIVInizerSetup {
 		if ( $this->divinizer_check_field( $this->options['enable_lightbox_everywhere'] ) ) {
 			require_once DIVINIZER_PATH . 'inc/features/DIVInizerLightBoxEverywhere.php';
 		}
-
+		if ( $this->divinizer_check_field( $this->options['enable_year_shortcode'] ) ) {
+			require_once DIVINIZER_PATH . 'inc/features/DIVInizerFooterYearShortcode.php';
+		}
 	}
 
 	/**

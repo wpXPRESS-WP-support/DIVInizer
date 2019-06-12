@@ -88,6 +88,13 @@ class DIVInizerDashboard {
 				'default'  => 0,
 				'children' => [ 'Disabled', 'Globally', 'Posts Only', 'Archive Pages Only' ],
 			],
+			'enable_year_shortcode'         => [
+				'title'    => 'Footer year shortcode',
+				'type'     => 'select',
+				'section'  => 'general',
+				'default'  => 0,
+				'children' => [ 'Disabled', 'Enabled' ],
+			],
 		];
 
 		add_action( 'admin_menu', array( $this, 'add_divinizer_menu' ), 11 );
