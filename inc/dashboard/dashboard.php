@@ -25,20 +25,13 @@ class DIVInizerDashboard {
 
 		// the fields array
 		$this->divinizer_fields = [
-			'enable_preloader'              => [
-				'title'    => 'Pre-loader',
-				'type'     => 'select',
-				'section'  => 'general',
-				'default'  => 0,
-				'children' => [ 'Disabled', 'Enabled' ],
-			],
-			'enable_fontawesome'            => [
+			/*'enable_fontawesome'            => [
 				'title'    => 'Fontawesome',
 				'type'     => 'select',
 				'section'  => 'general',
 				'default'  => 0,
 				'children' => [ 'Disabled', 'Enabled' ],
-			],
+			],*/
 			'enable_author_box'             => [
 				'title'    => 'Author Box',
 				'type'     => 'select',
