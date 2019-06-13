@@ -131,6 +131,7 @@ class DIVInizerDashboard {
 		<!-- dashboard interface -->
 		<div id="divinizer_wrap">
 			<h1><?php esc_html_e( 'DIVInizer Options', 'divinizer' ); ?></h1>
+			<h2>How it Works: the below settings are applied to posts and pages that do not use the Divi Builder. For example, if you prefer to blog using the WordPress Classic Editor or new Block Editor, these settings will be applied to those posts.</h2>
 			<?php settings_errors(); ?>
 
 			<form method="post" action="options.php" id="divinizer_form">
