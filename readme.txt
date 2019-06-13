@@ -74,5 +74,10 @@ Plus we include tons of other stuff like adding/updating content on your site, i
 
 == Changelog ==
 
+### 1.1
+* [NEW] Added the ability to use a [year] shortcode in the Footer Bottom Bar
+* [NEW] Added the ability to disable Divi's Featured Image Cropping
+* [TWEAK] Removed the preloader and FontAwesome features
+
 ### 1.0
 * initial release.

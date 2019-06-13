@@ -3,7 +3,7 @@
  * Plugin Name: ET Divinizer
  * Plugin URI: https://wordx.press/
  * Description: A plugin that adds more functionality to the Divi theme
- * Version: 1.0
+ * Version: 1.1
  * Author: WordXpress
  * Author URI: https://wordx.press/
  * Text Domain: divinizer
