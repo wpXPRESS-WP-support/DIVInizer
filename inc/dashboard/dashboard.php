@@ -95,6 +95,13 @@ class DIVInizerDashboard {
 				'default'  => 0,
 				'children' => [ 'Disabled', 'Enabled' ],
 			],
+			'featured_image_cropping'       => [
+				'title'    => 'Featured Image Cropping',
+				'type'     => 'select',
+				'section'  => 'general',
+				'default'  => 1,
+				'children' => [ 'Disabled', 'Enabled' ],
+			],
 		];
 
 		add_action( 'admin_menu', array( $this, 'add_divinizer_menu' ), 11 );

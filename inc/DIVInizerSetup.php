@@ -68,6 +68,10 @@ class DIVInizerSetup {
 		if ( $this->divinizer_check_field( $this->options['enable_year_shortcode'] ) ) {
 			require_once DIVINIZER_PATH . 'inc/features/DIVInizerFooterYearShortcode.php';
 		}
+		if ( ! $this->divinizer_check_field( $this->options['featured_image_cropping'] ) ) {
+			require_once DIVINIZER_PATH . 'inc/features/DIVInizerDisableFeaturedImageCropping.php';
+		}
+
 	}
 
 	/**
