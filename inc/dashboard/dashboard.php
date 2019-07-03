@@ -82,11 +82,12 @@ class DIVInizerDashboard {
 				'children' => [ 'Disabled', 'Globally', 'Posts Only', 'Archive Pages Only' ],
 			],
 			'enable_year_shortcode'         => [
-				'title'    => 'Footer year shortcode',
-				'type'     => 'select',
-				'section'  => 'general',
-				'default'  => 0,
-				'children' => [ 'Disabled', 'Enabled' ],
+				'title'       => 'Footer year shortcode',
+				'type'        => 'select',
+				'section'     => 'general',
+				'default'     => 0,
+				'children'    => [ 'Disabled', 'Enabled' ],
+				'description' => 'With this setting enabled you can use the [year] shortcode under Theme Customizer > Footer > Bottom Bar > EDIT FOOTER CREDITS to display the current year. Year may not show in the Customizer preview.',
 			],
 			'featured_image_cropping'       => [
 				'title'    => 'Featured Image Cropping',
@@ -208,6 +209,9 @@ class DIVInizerDashboard {
 					echo "</option>";
 				}
 				echo '</select>';
+				if ( isset( $this->divinizer_fields[ $id ]['description'] ) ) {
+					echo '&nbsp;<p>' . $this->divinizer_fields[ $id ]['description'] . '</p>';
+				}
 				break;
 		}
 	}
