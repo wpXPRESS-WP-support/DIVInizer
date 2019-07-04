@@ -37,7 +37,8 @@ If you're like us and want to "just write," we created ET Divinizer for you. We 
 * **Remove Sidebar** Remove of the sidebar globally, on archive, or single posts pages.
 * **Recent Posts Widget** Show any amount of latest posts in the sidebar, custom post types are supported.
 * **Twitter Feed Widget** Display any number of your latest tweets in your sidebar.
-
+* **Footer Year Shortcode** Use the [year] shortcode under Theme Customizer > Footer > Bottom Bar > EDIT FOOTER CREDITS to display the current year. Year may not show in the Customizer preview.
+* **Featured Image Cropping** Enable/disable Divi's default Featured image cropping
 = Requirements =
 
 ET Divinizer requires the [Divi theme](https://www.elegantthemes.com/gallery/divi/). It may work with the Divi Builder plugin and Extra theme, but is not tested with those at this time.

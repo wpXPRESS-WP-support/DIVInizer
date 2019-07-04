@@ -87,7 +87,6 @@ class DIVInizerDashboard {
 				'section'     => 'general',
 				'default'     => 0,
 				'children'    => [ 'Disabled', 'Enabled' ],
-				'description' => 'With this setting enabled you can use the [year] shortcode under Theme Customizer > Footer > Bottom Bar > EDIT FOOTER CREDITS to display the current year. Year may not show in the Customizer preview.',
 			],
 			'featured_image_cropping'       => [
 				'title'    => 'Featured Image Cropping',
