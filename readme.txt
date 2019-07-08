@@ -8,15 +8,15 @@ Stable tag: 1.0
 Requires PHP: 5.6
 License: GPLv2 or later
 
-Adds related posts, author boxes, the Divi lighbox, and much more, to the Divi theme by Elegant Themes.
+Adds related posts, author boxes, the Divi lighbox, year shortcode, prevent cropping, and much more, to the Divi theme by Elegant Themes.
 
 == Description ==
 
 = Divi Theme Enhancements Outside the Builder =
 
-ET Divinizer by [WordXpress](https://wordx.press) makes the Divi by ElegantThemes theme better for bloggers and other users who don't use the Divi Builder on posts. It allows you to set options for all non-Divi Builder posts (and some for pages). This includes: related posts similar to Extra theme, an Author Box displaying the author's Gravatar and bio at the end of each post, removing the sidebar, and automatically using Divi's lightbox to display images, changing the archive pages to a Grid style, and more!
+ET Divinizer by [WordXpress](https://wordx.press) makes the Divi by ElegantThemes theme better for bloggers and other users who don't use the Divi Builder on posts. It allows you to set options for all non-Divi Builder posts (and some for pages). This includes: related posts similar to Extra theme, an Author Box displaying the author's Gravatar and bio at the end of each post, removing the sidebar, and automatically using Divi's lightbox to display images, changing the archive pages to a Grid style, disable cropping of featured images, automatically display the current year in the footer, and more!
 
-[Divi](https://www.elegantthemes.com/gallery/divi/) is a registered trademark of Elegant Themes, Inc. This product is not affiliated with nor endorsed by [Elegant Themes](https://www.elegantthemes.com).
+[Divi](https://www.elegantthemes.com/affiliates/idevaffiliate.php?id=28312&url=30499) (affiliate link) is a registered trademark of Elegant Themes, Inc. This product is not affiliated with nor endorsed by Elegant Themes.
 
 = ET Divinizer's Story =
 
@@ -38,10 +38,11 @@ If you're like us and want to "just write," we created ET Divinizer for you. We 
 * **Recent Posts Widget** Show any amount of latest posts in the sidebar, custom post types are supported.
 * **Twitter Feed Widget** Display any number of your latest tweets in your sidebar.
 * **Footer Year Shortcode** Use the [year] shortcode under Theme Customizer > Footer > Bottom Bar > EDIT FOOTER CREDITS to display the current year. Year may not show in the Customizer preview.
-* **Featured Image Cropping** Enable/disable Divi's default Featured image cropping
+* **Featured Image Cropping** Disable Divi's default Featured image cropping! Now your featured images won't get cropped if they're wider than what Divi prefers by default.
+
 = Requirements =
 
-ET Divinizer requires the [Divi theme](https://www.elegantthemes.com/gallery/divi/). It may work with the Divi Builder plugin and Extra theme, but is not tested with those at this time.
+ET Divinizer requires the [Divi theme](https://www.elegantthemes.com/affiliates/idevaffiliate.php?id=28312&url=30499). It may work with the Divi Builder plugin and Extra theme, but is not tested with those at this time.
 
 == Screenshots ==
 
@@ -56,7 +57,7 @@ ET Divinizer requires the [Divi theme](https://www.elegantthemes.com/gallery/div
 Definitely! Customize the look by adding custom CSS under Divi > Theme Options > General > Custom CSS. In your dev tools look for classes that have "divinizer" at the beginning to target features added by ET Divinizer plugin.
 
 = Can you install ET Divinizer and/or customize its design for me? =
-If you'd like to have your WordPress website professionally supported and maintained, that's what we do at [WordXpress](https://wordx.press). Our plans include things like installing and configuring ET Divinizer, customizing its design to match your site.
+If you'd like to have your WordPress website professionally supported and maintained, that's what we do at [WordXpress](https://wordx.press/divi-support-maintenance/). Our plans include things like installing and configuring ET Divinizer, customizing its design to match your site.
 
 Plus we include tons of other stuff like adding/updating content on your site, improving speed, security, backups, and safe updates. We even give you access to thousands of dollars worth of premium plugins (on our Boxcar and above plans). If this is interesting to you, check out [our plans](https://wordx.press/wp-support-plans/) and sign up today! We'd love to help you with ET Divinizer, Divi Theme, and *much* more.
 
