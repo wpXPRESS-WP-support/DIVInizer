@@ -14,17 +14,17 @@ Adds related posts, author boxes, the Divi lighbox, year shortcode, prevent crop
 
 = Divi Theme Enhancements Outside the Builder =
 
-ET Divinizer by [WordXpress](https://wordx.press) makes the Divi by ElegantThemes theme better for bloggers and other users who don't use the Divi Builder on posts. It allows you to set options for all non-Divi Builder posts (and some for pages). This includes: related posts similar to Extra theme, an Author Box displaying the author's Gravatar and bio at the end of each post, removing the sidebar, and automatically using Divi's lightbox to display images, changing the archive pages to a Grid style, disable cropping of featured images, automatically display the current year in the footer, and more!
+ET DIVInizer by [WordXpress](https://wordx.press) makes the Divi by ElegantThemes theme better for bloggers and other users who don't use the Divi Builder on posts. It allows you to set options for all non-Divi Builder posts (and some for pages). This includes: related posts similar to Extra theme, an Author Box displaying the author's Gravatar and bio at the end of each post, removing the sidebar, and automatically using Divi's lightbox to display images, changing the archive pages to a Grid style, disable cropping of featured images, automatically display the current year in the footer, and more!
 
 [Divi](https://www.elegantthemes.com/affiliates/idevaffiliate.php?id=28312&url=30499) (affiliate link) is a registered trademark of Elegant Themes, Inc. This product is not affiliated with nor endorsed by Elegant Themes.
 
-= ET Divinizer's Story =
+= ET DIVInizer's Story =
 
 At **WordXpress** we support and maintain a lot of WordPress websites including *many* using the Divi theme. We love Divi! But for writing posts, the Divi Builder is way overkill for most blogging. If you're doing advanced, complex stories with lots of fancy formatting and interactive features, it's wonderful. Most of us just want to write, insert a few images and links, and publish!
 
-I found the Expand Divi plugin and was very excited about what it could do for us. However, it had a few shortcomings, including using only tags to calculate related posts. We don't use tags on our blog, so the related posts didn't work! I reached out to the plugin's developer Faycal, and asked if we could fork his plugin and create our own version? He was very supportive, so we combined it with some other stuff we'd been working on and viola! ET Divinizer was born, with category-based related posts, automatic lightboxing of images, and more.
+I found the Expand Divi plugin and was very excited about what it could do for us. However, it had a few shortcomings, including using only tags to calculate related posts. We don't use tags on our blog, so the related posts didn't work! I reached out to the plugin's developer Faycal, and asked if we could fork his plugin and create our own version? He was very supportive, so we combined it with some other stuff we'd been working on and viola! ET DIVInizer was born, with category-based related posts, automatic lightboxing of images, and more.
 
-If you're like us and want to "just write," we created ET Divinizer for you. We don't use Divi Builder for posts, and neither do most of our [members](https://wordx.press/wp-support-plans/). So we created this plugin to make the Divi blog a little more blogger-firendly by bringing some much-needed features from Extra and elsewhere to Divi.
+If you're like us and want to "just write," we created ET DIVInizer for you. We don't use Divi Builder for posts, and neither do most of our [members](https://wordx.press/wp-support-plans/). So we created this plugin to make the Divi blog a little more blogger-firendly by bringing some much-needed features from Extra and elsewhere to Divi.
 
 = Features =
 
@@ -42,12 +42,12 @@ If you're like us and want to "just write," we created ET Divinizer for you. We 
 
 = Requirements =
 
-ET Divinizer requires the [Divi theme](https://www.elegantthemes.com/affiliates/idevaffiliate.php?id=28312&url=30499). It may work with the Divi Builder plugin and Extra theme, but is not tested with those at this time.
+ET DIVInizer requires the [Divi theme](https://www.elegantthemes.com/affiliates/idevaffiliate.php?id=28312&url=30499). It may work with the Divi Builder plugin and Extra theme, but is not tested with those at this time.
 
 == Screenshots ==
 
 1. Author box and related posts.
-2. ET Divinizer options.
+2. ET DIVInizer options.
 3. Image in Divi lightbox.
 4. Post with sidebar removed.
 
