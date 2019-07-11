@@ -4,7 +4,7 @@ Donate link: https://paypal.me/fiddler
 Tags: Divi, related posts, post author box, lightbox, remove sidebar
 Requires at least: 4.9
 Tested up to: 5.2
-Stable tag: 1.0
+Stable tag: 1.1.0
 Requires PHP: 5.6
 License: GPLv2 or later
 
@@ -76,7 +76,7 @@ Plus we include tons of other stuff like adding/updating content on your site, i
 
 == Changelog ==
 
-### 1.1
+### 1.1.0
 * [NEW] Added the ability to use a [year] shortcode in the Footer Bottom Bar
 * [NEW] Added the ability to disable Divi's Featured Image Cropping
 * [TWEAK] Removed the preloader and FontAwesome features
