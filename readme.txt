@@ -14,7 +14,7 @@ Adds related posts, author boxes, the Divi lighbox, year shortcode, prevent crop
 
 = Divi Theme Enhancements Outside the Builder =
 
-ET DIVInizer by [WordXpress](https://wordx.press) makes the Divi by ElegantThemes theme better for bloggers and other users who don't use the Divi Builder on posts. It allows you to set options for all non-Divi Builder posts (and some for pages). This includes: related posts similar to Extra theme, an Author Box displaying the author's Gravatar and bio at the end of each post, removing the sidebar, and automatically using Divi's lightbox to display images, changing the archive pages to a Grid style, disable cropping of featured images, automatically display the current year in the footer, and more!
+ET DIVInizer by [WordXpress](http://wordx.press/divi-support-maintenance/) makes the Divi by ElegantThemes theme better for bloggers and other users who don't use the Divi Builder on posts. It allows you to set options for all non-Divi Builder posts (and some for pages). This includes: related posts similar to Extra theme, an Author Box displaying the author's Gravatar and bio at the end of each post, removing the sidebar, and automatically using Divi's lightbox to display images, changing the archive pages to a Grid style, disable cropping of featured images, automatically display the current year in the footer, and more!
 
 [Divi](https://www.elegantthemes.com/affiliates/idevaffiliate.php?id=28312&url=30499) (affiliate link) is a registered trademark of Elegant Themes, Inc. This product is not affiliated with nor endorsed by Elegant Themes.
 
