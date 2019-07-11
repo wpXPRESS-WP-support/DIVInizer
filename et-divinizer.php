@@ -1,11 +1,11 @@
 <?php
 /**
- * Plugin Name: ET Divinizer
- * Plugin URI: https://wordx.press/
- * Description: A plugin that adds more functionality to the Divi theme
+ * Plugin Name: ET DIVInizer
+ * Plugin URI: https://wordx.press/divinizer-plugin-makes-divi-blogs-awesome/
+ * Description: A plugin that adds functionality to non-Divi-builder posts and pages: lightbox, author boxes, remove sidebar, and more!
  * Version: 1.1-beta
- * Author: WordXpress
- * Author URI: https://wordx.press/
+ * Author: WordXpress - Divi Maintenance
+ * Author URI: http://wordx.press/divi-support-maintenance/
  * Text Domain: divinizer
  * License: GPLv2 or later
  * @package DIVInizer
