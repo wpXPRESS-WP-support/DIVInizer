@@ -25,20 +25,13 @@ class DIVInizerDashboard {
 
 		// the fields array
 		$this->divinizer_fields = [
-			'enable_preloader'              => [
-				'title'    => 'Pre-loader',
-				'type'     => 'select',
-				'section'  => 'general',
-				'default'  => 0,
-				'children' => [ 'Disabled', 'Enabled' ],
-			],
-			'enable_fontawesome'            => [
+			/*'enable_fontawesome'            => [
 				'title'    => 'Fontawesome',
 				'type'     => 'select',
 				'section'  => 'general',
 				'default'  => 0,
 				'children' => [ 'Disabled', 'Enabled' ],
-			],
+			],*/
 			'enable_author_box'             => [
 				'title'    => 'Author Box',
 				'type'     => 'select',
@@ -88,6 +81,20 @@ class DIVInizerDashboard {
 				'default'  => 0,
 				'children' => [ 'Disabled', 'Globally', 'Posts Only', 'Archive Pages Only' ],
 			],
+			'enable_year_shortcode'         => [
+				'title'       => 'Footer year shortcode',
+				'type'        => 'select',
+				'section'     => 'general',
+				'default'     => 0,
+				'children'    => [ 'Disabled', 'Enabled' ],
+			],
+			'featured_image_cropping'       => [
+				'title'    => 'Featured Image Cropping',
+				'type'     => 'select',
+				'section'  => 'general',
+				'default'  => 1,
+				'children' => [ 'Disabled', 'Enabled' ],
+			],
 		];
 
 		add_action( 'admin_menu', array( $this, 'add_divinizer_menu' ), 11 );
@@ -117,6 +124,7 @@ class DIVInizerDashboard {
 		<!-- dashboard interface -->
 		<div id="divinizer_wrap">
 			<h1><?php esc_html_e( 'DIVInizer Options', 'divinizer' ); ?></h1>
+			<h2>How it Works: the below settings are applied to posts and pages that do not use the Divi Builder. For example, if you prefer to blog using the WordPress Classic Editor or new Block Editor, these settings will be applied to those posts.</h2>
 			<?php settings_errors(); ?>
 
 			<form method="post" action="options.php" id="divinizer_form">
@@ -200,6 +208,9 @@ class DIVInizerDashboard {
 					echo "</option>";
 				}
 				echo '</select>';
+				if ( isset( $this->divinizer_fields[ $id ]['description'] ) ) {
+					echo '&nbsp;<p>' . $this->divinizer_fields[ $id ]['description'] . '</p>';
+				}
 				break;
 		}
 	}

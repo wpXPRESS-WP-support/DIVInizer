@@ -12,6 +12,13 @@
 	color: #fff;
 	border-radius: 3px 3px 0 0;
 }
+
+#divinizer_wrap h2 {
+	padding: 5px 30px;
+	font-size: 16px;
+	font-weight:300;
+}
+
 .divinizer_sections_wrap {overflow: hidden;}
 .divinizer_sections_wrap h2 {
 	background: #373942;

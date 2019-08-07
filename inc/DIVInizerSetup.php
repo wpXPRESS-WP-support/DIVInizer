@@ -41,9 +41,6 @@ class DIVInizerSetup {
 		require_once DIVINIZER_PATH . 'inc/widgets/DIVInizerTwitterFeedWidget.php';
 
 		// require features classes
-		if ( $this->divinizer_check_field( $this->options['enable_preloader'] ) ) {
-			require_once DIVINIZER_PATH . 'inc/features/DIVInizerPreloader.php';
-		}
 		if ( $this->divinizer_check_field( $this->options['enable_post_tags'] ) ) {
 			require_once DIVINIZER_PATH . 'inc/features/DIVInizerSinglePostTags.php';
 		}
@@ -64,6 +61,12 @@ class DIVInizerSetup {
 		}
 		if ( $this->divinizer_check_field( $this->options['enable_lightbox_everywhere'] ) ) {
 			require_once DIVINIZER_PATH . 'inc/features/DIVInizerLightBoxEverywhere.php';
+		}
+		if ( $this->divinizer_check_field( $this->options['enable_year_shortcode'] ) ) {
+			require_once DIVINIZER_PATH . 'inc/features/DIVInizerFooterYearShortcode.php';
+		}
+		if ( ! $this->divinizer_check_field( $this->options['featured_image_cropping'] ) ) {
+			require_once DIVINIZER_PATH . 'inc/features/DIVInizerDisableFeaturedImageCropping.php';
 		}
 
 	}
@@ -111,9 +114,11 @@ class DIVInizerSetup {
 			wp_enqueue_script( 'divinizer-frontend-scripts', DIVINIZER_URL . 'assets/scripts/frontend-scripts.js', array( 'jquery' ), null );
 		}
 
+		/*
 		if ( $this->options["enable_fontawesome"] == 1 ) {
 			wp_enqueue_style( 'divinizer-fontawesome', DIVINIZER_URL . 'assets/styles/font-awesome.min.css' );
 		}
+		*/
 	}
 
 	/**
