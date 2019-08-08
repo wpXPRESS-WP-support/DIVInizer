@@ -82,11 +82,11 @@ class DIVInizerDashboard {
 				'children' => [ 'Disabled', 'Globally', 'Posts Only', 'Archive Pages Only' ],
 			],
 			'enable_year_shortcode'         => [
-				'title'       => 'Footer year shortcode',
-				'type'        => 'select',
-				'section'     => 'general',
-				'default'     => 0,
-				'children'    => [ 'Disabled', 'Enabled' ],
+				'title'    => 'Footer year shortcode',
+				'type'     => 'select',
+				'section'  => 'general',
+				'default'  => 0,
+				'children' => [ 'Disabled', 'Enabled' ],
 			],
 			'featured_image_cropping'       => [
 				'title'    => 'Featured Image Cropping',

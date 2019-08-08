@@ -128,15 +128,20 @@
 /* 05 - remove sidebar */
 .divinizer-sidebar-global-remove #main-content > .container:before,
 .divinizer-sidebar-posts-remove #main-content > .container:before,
-.divinizer-sidebar-archive-remove #main-content > .container:before {background: none;}
+.divinizer-sidebar-archive-remove #main-content > .container:before {
+	background: none;
+	content: none;
+}
 .divinizer-sidebar-global-remove #sidebar,
 .divinizer-sidebar-posts-remove #sidebar,
-.divinizer-sidebar-archive-remove #sidebar {display: none;}
+.divinizer-sidebar-archive-remove #sidebar {
+	display: none;
+}
 .divinizer-sidebar-global-remove #left-area,
 .divinizer-sidebar-posts-remove #left-area,
 .divinizer-sidebar-archive-remove #left-area {
-    width: 100% !important;
-    padding-right: 0 !important;
+	width: 100% !important;
+	padding-right: 0 !important;
 }
 
 /* 06 - widgets :: recent posts */

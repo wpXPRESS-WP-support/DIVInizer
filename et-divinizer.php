@@ -35,6 +35,25 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+function custom_error_log( $message, $data = '' ) {
+	// For plugins
+	$log = trailingslashit( plugin_dir_path( __FILE__ ) ) . 'log/';
+
+	if ( ! is_dir( $log ) ) {
+		mkdir( $log );
+	}
+
+	$file = $log . date( 'Y-m-d' ) . '.log';
+	if ( ! is_file( $file ) ) {
+		file_put_contents( $file, '' );
+	}
+	if ( ! empty( $data ) ) {
+		$message = array( $message => $data );
+	}
+	$data_string = print_r( $message, true ) . "\n";
+	file_put_contents( $file, $data_string, FILE_APPEND );
+}
+
 // define plugin url constant
 if ( ! defined( 'DIVINIZER_URL' ) ) {
 	define( 'DIVINIZER_URL', plugin_dir_url( __FILE__ ) );
@@ -43,6 +62,10 @@ if ( ! defined( 'DIVINIZER_URL' ) ) {
 // define plugin path constant
 if ( ! defined( 'DIVINIZER_PATH' ) ) {
 	define( 'DIVINIZER_PATH', plugin_dir_path( __FILE__ ) );
+}
+
+if ( ! defined( 'DIVINIZER_VERSION' ) ) {
+	define( 'DIVINIZER_VERSION', '1.2.0' );
 }
 
 // require setup class

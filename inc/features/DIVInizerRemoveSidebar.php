@@ -12,14 +12,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 class DIVInizerRemoveSidebar {
+
+	/**
+	 * Options array
+	 *
+	 * @var mixed|void
+	 */
 	public $options;
 
 	/**
 	 * constructor
 	 */
-	function __construct() {
+	public function __construct() {
 		$this->options = get_option( 'divinizer' );
-		add_filter( 'body_class', array( $this, 'divinizer_remove_sidebar' ) );	
+		add_filter( 'body_class', array( $this, 'divinizer_remove_sidebar' ) );
 	}
 
 	/**
@@ -27,22 +33,22 @@ class DIVInizerRemoveSidebar {
 	 *
 	 * @return array
 	 */
-	function divinizer_remove_sidebar( $classes ) {
-		if ( $this->options['remove_sidebar'] == 1 ) {
+	public function divinizer_remove_sidebar( $classes ) {
+		if ( 1 === $this->options['remove_sidebar'] ) {
 			if ( is_category() || is_tag() || is_author() || is_search() || ( ! is_front_page() && is_home() ) || is_single() ) {
 				$classes[] = 'divinizer-sidebar-global-remove';
 			}
-		} elseif ( $this->options['remove_sidebar'] == 2 ) {
+		} elseif ( 1 === $this->options['remove_sidebar'] ) {
 			if ( is_single() ) {
 				$classes[] = 'divinizer-sidebar-posts-remove';
 			}
-		} elseif ( $this->options['remove_sidebar'] == 3 ) {
+		} elseif ( 1 === $this->options['remove_sidebar'] ) {
 			if ( is_category() || is_tag() || is_author() || is_search() || ( ! is_front_page() && is_home() ) ) {
 				$classes[] = 'divinizer-sidebar-archive-remove';
 			}
 		}
 
-    	return $classes;
+		return $classes;
 	}
 }
 

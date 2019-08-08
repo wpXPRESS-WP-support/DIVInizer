@@ -104,14 +104,13 @@ class DIVInizerSetup {
 	 * @return void
 	 */
 	public function divinizer_enqueue_frontend_scripts() {
-		$classes = get_body_class();
 
-		if ( in_array( 'divinizer-blog-grid', $classes ) || is_active_widget( false, false, 'divinizer_twitter_feed', true ) || is_active_widget( false, false, 'divinizer_recent_posts_widget', true ) || ( ( is_singular( 'post' ) ) && ( ( $this->options["enable_author_box"] == 1 ) || ( $this->options["enable_single_post_pagination"] == 1 ) || ( $this->options["enable_related_posts"] == 1 ) || ( $this->options["enable_post_tags"] == 1 ) ) ) ) {
-			wp_enqueue_style( 'divinizer-frontend-styles', DIVINIZER_URL . 'assets/styles/frontend-styles.css' );
+		if ( $this->enable_stylesheet() ) {
+			wp_enqueue_style( 'divinizer-frontend-styles', DIVINIZER_URL . 'assets/styles/frontend-styles.css', array(), DIVINIZER_VERSION );
 		}
 
-		if ( is_singular( 'post' ) && ( $this->options["enable_post_tags"] == 1 ) && ( $this->options['post_tags_location'] == 0 ) ) {
-			wp_enqueue_script( 'divinizer-frontend-scripts', DIVINIZER_URL . 'assets/scripts/frontend-scripts.js', array( 'jquery' ), null );
+		if ( is_singular( 'post' ) && ( 1 === $this->options['enable_post_tags'] ) && ( 0 === $this->options['post_tags_location'] ) ) {
+			wp_enqueue_script( 'divinizer-frontend-scripts', DIVINIZER_URL . 'assets/scripts/frontend-scripts.js', array( 'jquery' ), DIVINIZER_VERSION, true );
 		}
 
 		/*
@@ -119,6 +118,53 @@ class DIVInizerSetup {
 			wp_enqueue_style( 'divinizer-fontawesome', DIVINIZER_URL . 'assets/styles/font-awesome.min.css' );
 		}
 		*/
+	}
+
+	public function enable_stylesheet() {
+		$classes = get_body_class();
+
+		if ( in_array( 'divinizer-blog-grid', $classes, true ) ) {
+			return true;
+		}
+
+		if ( in_array( 'divinizer-sidebar-global-remove', $classes, true ) ) {
+			return true;
+		}
+
+		if ( in_array( 'divinizer-sidebar-posts-remove', $classes, true ) ) {
+			return true;
+		}
+
+		if ( in_array( 'divinizer-sidebar-archive-remove', $classes, true ) ) {
+			return true;
+		}
+
+		if ( is_active_widget( false, false, 'divinizer_twitter_feed', true ) ) {
+			return true;
+		}
+
+		if ( is_active_widget( false, false, 'divinizer_recent_posts_widget', true ) ) {
+			return true;
+		}
+
+		if ( ! is_singular( 'post' ) ) {
+			return false;
+		}
+
+		if ( 1 === $this->options['enable_author_box'] ) {
+			return true;
+		}
+		if ( 1 === $this->options['enable_single_post_pagination'] ) {
+			return true;
+		}
+		if ( 1 === $this->options['enable_related_posts'] ) {
+			return true;
+		}
+		if ( 1 === $this->options['enable_post_tags'] ) {
+			return true;
+		}
+
+		return false;
 	}
 
 	/**
