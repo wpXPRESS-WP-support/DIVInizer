@@ -3,7 +3,7 @@
  * Plugin Name: ET DIVInizer
  * Plugin URI: https://wordx.press/divinizer-plugin-makes-divi-blogs-awesome/
  * Description: A plugin that adds functionality to non-Divi-builder posts and pages: lightbox, author boxes, remove sidebar, and more!
- * Version: 1.1.0
+ * Version: 1.2.0
  * Author: WordXpress - Divi Maintenance
  * Author URI: http://wordx.press/divi-support-maintenance/
  * Text Domain: divinizer

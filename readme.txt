@@ -4,7 +4,7 @@ Donate link: https://paypal.me/fiddler
 Tags: Divi, related posts, post author box, lightbox, remove sidebar
 Requires at least: 4.9
 Tested up to: 5.2
-Stable tag: 1.1.0
+Stable tag: 1.2.0
 Requires PHP: 5.6
 License: GPLv2 or later
 
@@ -75,6 +75,10 @@ Plus we include tons of other stuff like adding/updating content on your site, i
 * [TwitterOAuth Library](https://github.com/abraham/twitteroauth/releases/tag/0.7.4)
 
 == Changelog ==
+
+### 1.2.0
+* [NEW] Added WordXpress sidebar
+* [FIX] Fixed a bug related to disabling the sidebar
 
 ### 1.1.0
 * [NEW] Added the ability to use a [year] shortcode in the Footer Bottom Bar
