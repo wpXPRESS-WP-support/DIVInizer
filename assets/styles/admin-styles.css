@@ -1,11 +1,11 @@
-.divinizer_wrap {
+#divinizer_wrap {
 	background: #fff;
 	margin: 40px 20px;
 	position: relative;
 	box-shadow: 0 5px 30px rgba(0,0,0,.1);
 	border-radius: 3px;
 }
-.divinizer_wrap h1 {
+#divinizer_wrap h1 {
 	background-color: #1f999c;
 	padding: 20px 30px;
 	font-size: 18px;
@@ -13,10 +13,47 @@
 	border-radius: 3px 3px 0 0;
 }
 
-.divinizer_wrap h2 {
+#divinizer_wrap h2 {
 	padding: 5px 30px;
 	font-size: 16px;
 	font-weight:300;
+}
+
+#divinizer_sidebar {
+	margin: 0 5%;
+	width: 35%;
+}
+
+#divinizer_sidebar ul{
+	padding-left: 25px;
+}
+
+#divinizer_sidebar p, #divinizer_sidebar ul {
+	font-size: 14px;
+}
+
+#divinizer_sidebar p.large, #divinizer_sidebar ul.large {
+	font-size: 18px;
+}
+
+
+#divinizer_sidebar p, #divinizer_sidebar ul li {
+	list-style-type: disc;
+}
+
+#divinizer_sidebar a.button{
+	color: #fff;
+	background: #28c6c9;
+	border-color: transparent;
+	box-shadow: none;
+	height: 45px;
+	font-size: 18px;
+	line-height: 1em;
+	margin: 0 auto;
+	padding: 12px 20px;
+	text-shadow: none;
+	text-align: center;
+	width: inherit;
 }
 
 .divinizer-settings{

@@ -122,11 +122,10 @@ class DIVInizerDashboard {
 		} ?>
 
 		<!-- dashboard interface -->
-		<div id="divinizer_settings" class="divinizer_wrap divinizer-settings">
+		<div id="divinizer_wrap" class="divinizer-settings">
 			<h1><?php esc_html_e( 'DIVInizer Options', 'divinizer' ); ?></h1>
 			<h2>How it Works: the below settings are applied to posts and pages that do not use the Divi Builder. For example, if you prefer to blog using the WordPress Classic Editor or new Block Editor, these settings will be applied to those posts.</h2>
 			<?php settings_errors(); ?>
-
 			<form method="post" action="options.php" id="divinizer_form">
 				<div class="divinizer_sections_wrap">
 					<?php
@@ -136,19 +135,15 @@ class DIVInizerDashboard {
 				</div>
 				<?php submit_button(); ?>
 				<div id="divinizer_save"></div>
-
 			</form>
 		</div>
 		<div id="divinizer_sidebar" class="divinizer-settings">
 			<h1><?php esc_html_e( 'Need Help With Divi?', 'divinizer' ); ?></h1>
 			<h1><?php esc_html_e( 'Site Maintenance Too Much Hassle?', 'divinizer' ); ?></h1>
-
 			<img src="<?php echo DIVINIZER_URL ?>/assets/images/WordXpress-logo-med.png">
-
-			<p>Check out WordXpress!</p>
-
-			<p><i><strong>We make your life easier</strong> by supporting and maintaining your Divi + WordPress website.</i></p>
-			<ul>
+			<p class="large">Check out WordXpress!</p>
+			<p class="large"><i><strong>We make your life easier</strong> by supporting and maintaining your Divi + WordPress website.</i></p>
+			<ul class="large">
 				<li>Save time with content edits, updates, changes and support by Divi experts.</li>
 				<li>Increase leads and sales with premium SEO and review marketing plugins.</li>
 				<li>Add peace of mind with backups, monitoring, security, and more.</li>
@@ -160,10 +155,8 @@ class DIVInizerDashboard {
 				<li>Maintenance, updates, backups, and monitoring.</li>
 				<li>Thousands of dollars of premium plugins & services.</li>
 			</ul>
-			[Learn More button](https://wordx.press/divi-support-maintenance/)
-
-			<p>Do you build Divi websites? If so, join our [Affiliate Program](https://wordx.press/affiliate-area/) to get paid for ensuring your clients are taken care of after you’ve finished the design.</p>
-
+			<a href="https://wordx.press/divi-support-maintenance/" target="_blank" class="button button-primary">Learn More</a>
+			<p>Do you build Divi websites? If so, join our <a href="https://wordx.press/affiliate-area/" target="_blank">Affiliate Program</a> to get paid for ensuring your clients are taken care of after you’ve finished the design.</p>
 		</div>
 		<?php
 	}
