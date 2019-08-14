@@ -53,7 +53,7 @@ class DIVInizerSetup {
 		if ( $this->divinizer_check_field( $this->options['enable_related_posts'] ) ) {
 			require_once DIVINIZER_PATH . 'inc/features/DIVInizerRelatedPosts.php';
 		}
-		if ( $this->divinizer_check_field( $this->options['enable_archive_blog_styles'] ) ) {
+		if ( isset( $this->options['enable_archive_blog_styles'] ) && $this->divinizer_check_field( $this->options['enable_archive_blog_styles'] ) ) {
 			require_once DIVINIZER_PATH . 'inc/features/DIVInizerArchiveBlogStyles.php';
 		}
 		if ( $this->divinizer_check_field( $this->options['remove_sidebar'] ) ) {
