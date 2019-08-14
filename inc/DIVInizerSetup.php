@@ -44,10 +44,10 @@ class DIVInizerSetup {
 		if ( $this->divinizer_check_field( $this->options['enable_post_tags'] ) ) {
 			require_once DIVINIZER_PATH . 'inc/features/DIVInizerSinglePostTags.php';
 		}
-		if ( $this->divinizer_check_field( $this->options['enable_author_box'] ) ) {
+		if ( isset( $this->options['enable_author_box'] ) && $this->divinizer_check_field( $this->options['enable_author_box'] ) ) {
 			require_once DIVINIZER_PATH . 'inc/features/DIVInizerAuthorBox.php';
 		}
-		if ( $this->divinizer_check_field( $this->options['enable_single_post_pagination'] ) ) {
+		if ( isset( $this->options['enable_single_post_pagination'] ) && $this->divinizer_check_field( $this->options['enable_single_post_pagination'] ) ) {
 			require_once DIVINIZER_PATH . 'inc/features/DIVInizerSinglePostPagination.php';
 		}
 		if ( $this->divinizer_check_field( $this->options['enable_related_posts'] ) ) {
@@ -59,13 +59,13 @@ class DIVInizerSetup {
 		if ( $this->divinizer_check_field( $this->options['remove_sidebar'] ) ) {
 			require_once DIVINIZER_PATH . 'inc/features/DIVInizerRemoveSidebar.php';
 		}
-		if ( $this->divinizer_check_field( $this->options['enable_lightbox_everywhere'] ) ) {
+		if ( isset( $this->options['enable_lightbox_everywhere'] ) && $this->divinizer_check_field( $this->options['enable_lightbox_everywhere'] ) ) {
 			require_once DIVINIZER_PATH . 'inc/features/DIVInizerLightBoxEverywhere.php';
 		}
-		if ( $this->divinizer_check_field( $this->options['enable_year_shortcode'] ) ) {
+		if ( isset( $this->options['enable_year_shortcode'] ) && $this->divinizer_check_field( $this->options['enable_year_shortcode'] ) ) {
 			require_once DIVINIZER_PATH . 'inc/features/DIVInizerFooterYearShortcode.php';
 		}
-		if ( ! $this->divinizer_check_field( $this->options['featured_image_cropping'] ) ) {
+		if ( isset( $this->options['featured_image_cropping'] ) && ! $this->divinizer_check_field( $this->options['featured_image_cropping'] ) ) {
 			require_once DIVINIZER_PATH . 'inc/features/DIVInizerDisableFeaturedImageCropping.php';
 		}
 

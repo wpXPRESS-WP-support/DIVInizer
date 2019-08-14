@@ -34,17 +34,17 @@ class DIVInizerDashboard {
 			],*/
 			'enable_author_box'             => [
 				'title'    => 'Author Box',
-				'type'     => 'select',
+				'type'     => 'checkbox',
 				'section'  => 'general',
 				'default'  => 0,
-				'children' => [ 'Disabled', 'Enabled' ],
+				//'children' => [ 'Disabled', 'Enabled' ],
 			],
 			'enable_single_post_pagination' => [
 				'title'    => 'Single Post Pagination',
-				'type'     => 'select',
+				'type'     => 'checkbox',
 				'section'  => 'general',
 				'default'  => 0,
-				'children' => [ 'Disabled', 'Enabled' ],
+				//'children' => [ 'Disabled', 'Enabled' ],
 			],
 			'enable_related_posts'          => [
 				'title'    => 'Related Posts',
@@ -62,10 +62,10 @@ class DIVInizerDashboard {
 			],
 			'enable_lightbox_everywhere'    => [
 				'title'    => 'Lightbox for posts and pages',
-				'type'     => 'select',
+				'type'     => 'checkbox',
 				'section'  => 'general',
 				'default'  => 0,
-				'children' => [ 'Disabled', 'Enabled' ],
+				//'children' => [ 'Disabled', 'Enabled' ],
 			],
 			'enable_archive_blog_styles'    => [
 				'title'    => 'Archive Blog Styles',
@@ -83,17 +83,17 @@ class DIVInizerDashboard {
 			],
 			'enable_year_shortcode'         => [
 				'title'    => 'Footer year shortcode',
-				'type'     => 'select',
+				'type'     => 'checkbox',
 				'section'  => 'general',
 				'default'  => 0,
-				'children' => [ 'Disabled', 'Enabled' ],
+				//'children' => [ 'Disabled', 'Enabled' ],
 			],
 			'featured_image_cropping'       => [
 				'title'    => 'Featured Image Cropping',
-				'type'     => 'select',
+				'type'     => 'checkbox',
 				'section'  => 'general',
 				'default'  => 1,
-				'children' => [ 'Disabled', 'Enabled' ],
+				//'children' => [ 'Disabled', 'Enabled' ],
 			],
 		];
 
@@ -227,6 +227,12 @@ class DIVInizerDashboard {
 					echo "</option>";
 				}
 				echo '</select>';
+				if ( isset( $this->divinizer_fields[ $id ]['description'] ) ) {
+					echo '&nbsp;<p>' . $this->divinizer_fields[ $id ]['description'] . '</p>';
+				}
+				break;
+			case 'checkbox':
+				echo '<input type="checkbox" name="divinizer[' . $id . ']" value="1" ' . checked( 1, $id_field, false ) . '>';
 				if ( isset( $this->divinizer_fields[ $id ]['description'] ) ) {
 					echo '&nbsp;<p>' . $this->divinizer_fields[ $id ]['description'] . '</p>';
 				}
