@@ -27,6 +27,9 @@ class DIVInizerSetup {
 	 * @return void
 	 */
 	public function divinizer_register() {
+
+		add_action( 'init', array( $this, 'unregister_projects' ), 10 );
+
 		add_filter( 'plugin_action_links_DIVInizer/divinizer.php', array( $this, 'divinizer_add_settings_link' ) );
 
 		add_action( 'admin_enqueue_scripts', array( $this, 'divinizer_enqueue_admin_scripts' ) );
@@ -178,6 +181,12 @@ class DIVInizerSetup {
 		} else {
 			return false;
 		}
+	}
+
+	public function unregister_projects() {
+		unregister_post_type( 'project' );
+		unregister_taxonomy( 'project_category' );
+		unregister_taxonomy( 'project_tag' );
 	}
 }
 
