@@ -226,6 +226,15 @@ class DIVInizerDashboard {
 				}
 				break;
 			case 'checkbox':
+				?>
+				<div class="et-box-content">
+					<input type="checkbox" class="et-checkbox yes_no_button" name="divi_fixed_nav" id="divi_fixed_nav" checked="checked" style="display: none;"><div class="et_pb_yes_no_button et_pb_on_state"><!-- .et_pb_on_state || .et_pb_off_state -->
+						<span class="et_pb_value_text et_pb_on_value">Enabled</span>
+						<span class="et_pb_button_slider"></span>
+						<span class="et_pb_value_text et_pb_off_value">Disabled</span>
+					</div>
+				</div>
+				<?php
 				echo '<input type="checkbox" name="divinizer[' . $id . ']" value="1" ' . checked( 1, $id_field, false ) . '>';
 				if ( isset( $this->divinizer_fields[ $id ]['description'] ) ) {
 					echo '&nbsp;<p>' . $this->divinizer_fields[ $id ]['description'] . '</p>';
