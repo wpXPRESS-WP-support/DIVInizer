@@ -55,6 +55,7 @@
     margin-bottom: 20px;
 }
 .divinizer_related_post:nth-of-type(3) {margin-right: 0%;}
+
 .divinizer_related_post img {
     max-height: 140px;
     object-fit: cover;
@@ -70,6 +71,14 @@
     }
 }
 
+/**
+Clearfix after related posts
+ */
+.divinizer_related_posts:after {
+	content: "";
+	display: block;
+	clear: left;
+}
 
 /* 03 - post tags */
 .divinizer-above-tags {margin-bottom: 30px;}

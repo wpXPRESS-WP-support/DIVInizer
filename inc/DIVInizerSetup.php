@@ -157,16 +157,16 @@ class DIVInizerSetup {
 			return false;
 		}
 
-		if ( 1 === $this->options['enable_author_box'] ) {
+		if ( isset( $this->options['enable_author_box'] ) && 1 === $this->options['enable_author_box'] ) {
 			return true;
 		}
-		if ( 1 === $this->options['enable_single_post_pagination'] ) {
+		if ( isset( $this->options['enable_single_post_pagination'] ) && 1 === $this->options['enable_single_post_pagination'] ) {
 			return true;
 		}
-		if ( 1 === $this->options['enable_related_posts'] ) {
+		if ( isset( $this->options['enable_related_posts'] ) && 0 !== $this->options['enable_related_posts'] ) {
 			return true;
 		}
-		if ( 1 === $this->options['enable_post_tags'] ) {
+		if ( isset( $this->options['enable_post_tags'] ) && 0 !== $this->options['enable_post_tags'] ) {
 			return true;
 		}
 
