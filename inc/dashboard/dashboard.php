@@ -214,6 +214,7 @@ class DIVInizerDashboard {
 		// output the field HTML according to de_field type
 		switch ( $this->divinizer_fields[ $id ]['type'] ) {
 			case 'select':
+				?><div class="et-epanel-box"><?php
 				echo '<select name="divinizer[' . $id . ']">';
 				$size = count( $this->divinizer_fields[ $id ]['children'] );
 				for ( $i = 0; $i < $size; $i ++ ) {
@@ -222,6 +223,7 @@ class DIVInizerDashboard {
 					echo '</option>';
 				}
 				echo '</select>';
+				?></div><?php
 				if ( isset( $this->divinizer_fields[ $id ]['description'] ) ) {
 					echo '&nbsp;<p>' . $this->divinizer_fields[ $id ]['description'] . '</p>';
 				}

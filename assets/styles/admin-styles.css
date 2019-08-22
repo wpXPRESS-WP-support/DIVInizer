@@ -252,3 +252,46 @@ input.et-checkbox.yes_no_button {
 #divinizer_wrap .et-hidden-option .et_pb_yes_no_button {
 	display: none;
 }
+
+/**
+Select box styling
+ */
+#divinizer_wrap .et-epanel-box {
+	display: inline-block;
+	width: 65%;
+	vertical-align: top;
+	padding: 0 0 0 30px;
+	box-sizing: border-box;
+}
+
+.et-epanel-box select {
+	margin-left: 0;
+	border-radius: 3px;
+	border: none;
+	box-shadow: none;
+	background: #F1F5F9;
+	padding: 13px;
+	font-size: 13px;
+	color: #4c5866;
+	height: auto;
+	width: auto;
+	font-family: 'Open Sans', sans-serif;
+	width: 100%;
+	margin-bottom: 0;
+	-webkit-transition: background .5s;
+	-moz-transition: background .5s;
+	transition: background .5s;
+	font-weight: 600;
+}
+
+.et-epanel-box select {
+	padding: 5px 13px;
+}
+
+.et-epanel-box select {
+	height: 30px;
+}
+
+.et-epanel-box select {
+	width: 55%;
+}
