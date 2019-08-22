@@ -214,19 +214,33 @@ class DIVInizerDashboard {
 		// output the field HTML according to de_field type
 		switch ( $this->divinizer_fields[ $id ]['type'] ) {
 			case 'select':
+				?><div class="et-epanel-box"><?php
 				echo '<select name="divinizer[' . $id . ']">';
-				for ( $i = 0; $i < sizeof( $this->divinizer_fields[ $id ]['children'] ); $i ++ ) {
+				$size = count( $this->divinizer_fields[ $id ]['children'] );
+				for ( $i = 0; $i < $size; $i ++ ) {
 					echo "<option value='" . $i . "' " . selected( $id_field, $i, false ) . ">";
 					esc_html_e( $this->divinizer_fields[ $id ]['children'][ $i ], 'divinizer' );
-					echo "</option>";
+					echo '</option>';
 				}
 				echo '</select>';
+				?></div><?php
 				if ( isset( $this->divinizer_fields[ $id ]['description'] ) ) {
 					echo '&nbsp;<p>' . $this->divinizer_fields[ $id ]['description'] . '</p>';
 				}
 				break;
 			case 'checkbox':
-				echo '<input type="checkbox" name="divinizer[' . $id . ']" value="1" ' . checked( 1, $id_field, false ) . '>';
+				$checked = checked( 1, $id_field, false );
+				$button_state = $id_field ? 'et_pb_on_state' : 'et_pb_off_state';
+				?>
+				<div class="et-box-content">
+					<?php echo '<input type="checkbox" class="et-checkbox yes_no_button" name="divinizer[' . $id . ']" value="1" ' . $checked . ' style="display: none;">'; ?>
+					<div class="et_pb_yes_no_button <?php echo $button_state ?>"><!-- .et_pb_on_state || .et_pb_off_state -->
+						<span class="et_pb_value_text et_pb_on_value">Enabled</span>
+						<span class="et_pb_button_slider"></span>
+						<span class="et_pb_value_text et_pb_off_value">Disabled</span>
+					</div>
+				</div>
+				<?php
 				if ( isset( $this->divinizer_fields[ $id ]['description'] ) ) {
 					echo '&nbsp;<p>' . $this->divinizer_fields[ $id ]['description'] . '</p>';
 				}

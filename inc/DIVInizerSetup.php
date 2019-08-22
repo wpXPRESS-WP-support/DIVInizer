@@ -98,6 +98,9 @@ class DIVInizerSetup {
 			wp_enqueue_style( 'divinizer-admin-styles', DIVINIZER_URL . 'assets/styles/admin-styles.css', array(), null );
 			wp_enqueue_script( 'divinizer-admin-scripts', DIVINIZER_URL . 'assets/scripts/admin-scripts.js', array( 'jquery' ), null );
 			wp_enqueue_script( 'jquery-form' );
+
+			wp_enqueue_style( 'epanel-style', get_template_directory_uri() . '/epanel/css/panel.css', array(), et_get_theme_version() );
+
 		}
 	}
 
