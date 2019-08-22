@@ -116,9 +116,13 @@ Start of copying over panel.css styling for checkboxes and selcect boxes
 	box-sizing: border-box;
 }
 
-#divinizer_wrap .et_pb_yes_no_button.et_pb_on_state {
-	background-color: #008BDB;
+/**
+ * Yes / No toggle styling
+ */
+input.et-checkbox.yes_no_button {
+	display: none;
 }
+
 #divinizer_wrap .et_pb_yes_no_button {
 	width: 100%;
 	display: inline-block;
@@ -131,4 +135,120 @@ Start of copying over panel.css styling for checkboxes and selcect boxes
 	-moz-border-radius: 3px;
 	border-radius: 3px;
 	font-size: 12px;
+}
+
+#divinizer_wrap .et_pb_yes_no_button.et_pb_off_state {
+	background-color: #F1F5F9;
+}
+
+#divinizer_wrap .et_pb_yes_no_button.et_pb_on_state {
+	background-color: #008BDB;
+}
+
+#divinizer_wrap .et_pb_yes_no_button span.et_pb_button_slider {
+	position: absolute;
+	background: #FFF;
+	width: 50%;
+	height: 20px;
+	margin: 4px 0;
+	background: #FFF;
+	-webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+	-moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+#divinizer_wrap .et_pb_yes_no_button.et_pb_off_state span.et_pb_button_slider {
+	left: 5px;
+}
+
+.rtl #divinizer_wrap .et_pb_yes_no_button.et_pb_off_state span.et_pb_button_slider {
+	left: 50%;
+	margin-left: -5px;
+}
+
+#divinizer_wrap .et_pb_yes_no_button.et_pb_on_state span.et_pb_button_slider {
+	left: 50%;
+	margin-left: -5px;
+}
+
+.rtl #divinizer_wrap .et_pb_yes_no_button.et_pb_on_state span.et_pb_button_slider {
+	left: 5px;
+	margin-left: 0;
+}
+
+#divinizer_wrap .et_pb_yes_no_button.et_pb_on_state span.et_pb_value_text.et_pb_on_value {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+#divinizer_wrap .et_pb_yes_no_button.et_pb_off_state span.et_pb_value_text.et_pb_off_value {
+	margin-right: 0;
+	margin-left: 0;
+}
+
+#divinizer_wrap .et_pb_yes_no_button span.et_pb_value_text {
+	padding: 6px;
+	float: left;
+	width: 50%;
+	text-align: center;
+	font-weight: 700;
+	text-transform: uppercase;
+	-moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.rtl #divinizer_wrap .et_pb_yes_no_button span.et_pb_value_text {
+	float: right;
+}
+
+#divinizer_wrap span.et_pb_value_text.et_pb_off_value {
+	color: #8E969E;
+}
+
+#divinizer_wrap span.et_pb_value_text.et_pb_on_value {
+	color: #FFF;
+}
+
+#divinizer_wrap .et_pb_yes_no_button_wrapper select {
+	opacity: 0;
+	position: absolute;
+	z-index: -1;
+	width: 0px !important;
+	height: 0px !important;
+}
+
+#divinizer_wrap .et-pb-options-tab-advanced .et_pb_yes_no_button_wrapper {
+	width: 200px;
+	position: relative;
+}
+
+#divinizer_wrap .et-pb-options-tab-advanced .et_pb_yes_no_button {
+	float: left;
+}
+
+#divinizer_wrap .et_pb_button_equal_sides .et_pb_yes_no_button.et_pb_on_state {
+	background-color: #F1F5F9;
+}
+
+#divinizer_wrap .et_pb_button_equal_sides span.et_pb_value_text.et_pb_on_value {
+	color: #8E969E;
+}
+
+#divinizer_wrap .et-hidden-option .et_pb_yes_no_button {
+	display: none;
 }
