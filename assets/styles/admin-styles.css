@@ -11,6 +11,7 @@
 	font-size: 18px;
 	color: #fff;
 	border-radius: 3px 3px 0 0;
+	margin: 0;
 }
 
 #divinizer_wrap h2 {
@@ -22,6 +23,10 @@
 #divinizer_sidebar {
 	margin: 0 5%;
 	width: 35%;
+}
+
+#divinizer_sidebar img {
+	max-width: 80%;
 }
 
 #divinizer_sidebar ul{
@@ -54,6 +59,16 @@
 	text-shadow: none;
 	text-align: center;
 	width: inherit;
+}
+
+@media only screen and (max-width: 1190px) {
+	#divinizer_sidebar{
+		display: block;
+	}
+	#divinizer_wrap, #divinizer_sidebar{
+		width: 90%;
+	}
+
 }
 
 .divinizer-settings{
