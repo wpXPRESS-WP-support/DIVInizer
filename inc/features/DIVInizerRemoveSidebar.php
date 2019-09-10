@@ -34,18 +34,22 @@ class DIVInizerRemoveSidebar {
 	 * @return array
 	 */
 	public function divinizer_remove_sidebar( $classes ) {
-		if ( 1 === $this->options['remove_sidebar'] ) {
-			if ( is_category() || is_tag() || is_author() || is_search() || ( ! is_front_page() && is_home() ) || is_single() ) {
-				$classes[] = 'divinizer-sidebar-global-remove';
-			}
-		} elseif ( 1 === $this->options['remove_sidebar'] ) {
-			if ( is_single() ) {
-				$classes[] = 'divinizer-sidebar-posts-remove';
-			}
-		} elseif ( 1 === $this->options['remove_sidebar'] ) {
-			if ( is_category() || is_tag() || is_author() || is_search() || ( ! is_front_page() && is_home() ) ) {
-				$classes[] = 'divinizer-sidebar-archive-remove';
-			}
+		switch ( $this->options['remove_sidebar'] ) {
+			case '1':
+				if ( is_category() || is_tag() || is_author() || is_search() || ( ! is_front_page() && is_home() ) || is_single() ) {
+					$classes[] = 'divinizer-sidebar-global-remove';
+				}
+				break;
+			case '2':
+				if ( is_single() ) {
+					$classes[] = 'divinizer-sidebar-global-remove';
+				}
+				break;
+			case '3':
+				if ( is_category() || is_tag() || is_author() || is_search() || ( ! is_front_page() && is_home() ) ) {
+					$classes[] = 'divinizer-sidebar-archive-remove';
+				}
+				break;
 		}
 
 		return $classes;
