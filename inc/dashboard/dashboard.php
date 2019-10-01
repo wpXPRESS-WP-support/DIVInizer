@@ -90,7 +90,7 @@ class DIVInizerDashboard {
 				'default' => 0,
 			],
 			'featured_image_cropping'       => [
-				'title'   => 'Remove Featured Image Cropping',
+				'title'   => 'Prevent Featured Image Cropping',
 				'type'    => 'checkbox',
 				'section' => 'general',
 				'default' => 0,
