@@ -70,6 +70,12 @@ class DIVInizerDashboard {
 				'section' => 'general',
 				'default' => 0,
 			],
+			'disable_projects'              => [
+				'title'   => 'Remove Projects CPT',
+				'type'    => 'checkbox',
+				'section' => 'general',
+				'default' => 0,
+			],
 			'remove_sidebar'                => [
 				'title'    => 'Remove Sidebar',
 				'type'     => 'select',

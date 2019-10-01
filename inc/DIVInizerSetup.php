@@ -28,8 +28,6 @@ class DIVInizerSetup {
 	 */
 	public function divinizer_register() {
 
-		add_action( 'init', array( $this, 'unregister_projects' ), 10 );
-
 		add_filter( 'plugin_action_links_DIVInizer/divinizer.php', array( $this, 'divinizer_add_settings_link' ) );
 
 		add_action( 'admin_enqueue_scripts', array( $this, 'divinizer_enqueue_admin_scripts' ) );
@@ -58,6 +56,9 @@ class DIVInizerSetup {
 		}
 		if ( isset( $this->options['enable_archive_blog_styles'] ) && $this->divinizer_check_field( $this->options['enable_archive_blog_styles'] ) ) {
 			require_once DIVINIZER_PATH . 'inc/features/DIVInizerArchiveBlogStyles.php';
+		}
+		if ( isset( $this->options['disable_projects'] ) && $this->divinizer_check_field( $this->options['disable_projects'] ) ) {
+			require_once DIVINIZER_PATH . 'inc/features/DIVInizerDisableProjects.php';
 		}
 		if ( $this->divinizer_check_field( $this->options['remove_sidebar'] ) ) {
 			require_once DIVINIZER_PATH . 'inc/features/DIVInizerRemoveSidebar.php';
@@ -186,11 +187,6 @@ class DIVInizerSetup {
 		}
 	}
 
-	public function unregister_projects() {
-		unregister_post_type( 'project' );
-		unregister_taxonomy( 'project_category' );
-		unregister_taxonomy( 'project_tag' );
-	}
 }
 
 if ( class_exists( 'DIVInizerSetup' ) ) {
