@@ -70,7 +70,7 @@ Plus we include tons of other stuff like adding/updating content on your site, i
 == Credits ==
 
 * [Expand Divi](https://wordpress.org/plugins/expand-divi/)
-* [Surbma - Divi Lightbox] (https://wordpress.org/plugins/surbma-divi-lightbox/)
+* [Surbma - Divi Lightbox](https://wordpress.org/plugins/surbma-divi-lightbox/)
 * [Divi-Lightbox-for-Jetpack-Tiled-Galleries](https://github.com/s-a-s-k-i-a/Divi-Lightbox-for-Jetpack-Tiled-Galleries)
 * [TwitterOAuth Library](https://github.com/abraham/twitteroauth/releases/tag/0.7.4)
 
