@@ -134,7 +134,7 @@ class DIVInizerDashboard {
 		<div id="divinizer_sidebar" class="divinizer-settings">
 			<h1><?php esc_html_e( 'Need Help With Divi?', 'divinizer' ); ?></h1>
 			<h1><?php esc_html_e( 'Site Maintenance Too Much Hassle?', 'divinizer' ); ?></h1>
-			<img src="<?php echo DIVINIZER_URL ?>/assets/images/WordXpress-logo-med.png">
+			<a href="https://wordx.press/divi-support-maintenance/?utm_source=divinizer_plugin&utm_medium=wp_admin_settings&utm_campaign=plugins" target="_blank"><img src="<?php echo DIVINIZER_URL ?>/assets/images/WordXpress-logo-med.png"></a>
 			<p class="large">Check out WordXpress!</p>
 			<p class="large"><i><strong>We make your life easier</strong> by supporting and maintaining your Divi + WordPress website.</i></p>
 			<ul class="large">
@@ -149,7 +149,7 @@ class DIVInizerDashboard {
 				<li>Maintenance, updates, backups, and monitoring.</li>
 				<li>Thousands of dollars of premium plugins & services.</li>
 			</ul>
-			<a href="https://wordx.press/divi-support-maintenance/" target="_blank" class="button button-primary">Learn More</a>
+			<a href="https://wordx.press/divi-support-maintenance/?utm_source=divinizer_plugin&utm_medium=wp_admin_settings&utm_campaign=plugins" target="_blank" class="button button-primary">Learn More</a>
 			<p>Do you build Divi websites? If so, join our <a href="https://wordx.press/affiliate-area/" target="_blank">Affiliate Program</a> to get paid for ensuring your clients are taken care of after you’ve finished the design.</p>
 		</div>
 		<?php
