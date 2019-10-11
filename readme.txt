@@ -78,8 +78,11 @@ Plus we include tons of other stuff like adding/updating content on your site, i
 == Changelog ==
 
 ### 1.2.0
-* [NEW] Added WordXpress sidebar
-* [FIX] Fixed a bug related to disabling the sidebar
+* [NEW] Added WordXpress sidebar to the settings page
+* [TWEAK] Updates the settings page to mimic Divi styles
+* [FIX] Fixed a bug related to disabling the sidebar on posts/pages
+* [FIX] Fixes a few styling bugs
+* [NEW] Adds the ability to unregister the Divi project post type
 
 ### 1.1.0
 * [NEW] Added the ability to use a [year] shortcode in the Footer Bottom Bar
