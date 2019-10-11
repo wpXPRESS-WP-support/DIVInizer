@@ -3,7 +3,7 @@
  * Plugin Name: WXP DIVInizer
  * Plugin URI: https://wordx.press/divinizer-plugin-makes-divi-blogs-awesome/
  * Description: A plugin that adds functionality to non-Divi-builder posts and pages: lightbox, author boxes, remove sidebar, and more!
- * Version: 1.2.0-beta
+ * Version: 1.2.0
  * Author: WordXpress - Divi Maintenance
  * Author URI: http://wordx.press/divi-support-maintenance/
  * Text Domain: divinizer
@@ -33,25 +33,6 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 // exit when accessed directly
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
-}
-
-function custom_error_log( $message, $data = '' ) {
-	// For plugins
-	$log = trailingslashit( plugin_dir_path( __FILE__ ) ) . 'log/';
-
-	if ( ! is_dir( $log ) ) {
-		mkdir( $log );
-	}
-
-	$file = $log . date( 'Y-m-d' ) . '.log';
-	if ( ! is_file( $file ) ) {
-		file_put_contents( $file, '' );
-	}
-	if ( ! empty( $data ) ) {
-		$message = array( $message => $data );
-	}
-	$data_string = print_r( $message, true ) . "\n";
-	file_put_contents( $file, $data_string, FILE_APPEND );
 }
 
 // define plugin url constant
