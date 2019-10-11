@@ -52,7 +52,6 @@
 /* 02 - related posts */
 .divinizer_related_posts {
 	margin: 30px auto;
-	overflow: auto;
 }
 
 /** Clearfix after related posts */
