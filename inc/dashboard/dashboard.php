@@ -33,18 +33,16 @@ class DIVInizerDashboard {
 				'children' => [ 'Disabled', 'Enabled' ],
 			],*/
 			'enable_author_box'             => [
-				'title'    => 'Author Box',
-				'type'     => 'select',
-				'section'  => 'general',
-				'default'  => 0,
-				'children' => [ 'Disabled', 'Enabled' ],
+				'title'   => 'Author Box',
+				'type'    => 'checkbox',
+				'section' => 'general',
+				'default' => 0,
 			],
 			'enable_single_post_pagination' => [
-				'title'    => 'Single Post Pagination',
-				'type'     => 'select',
-				'section'  => 'general',
-				'default'  => 0,
-				'children' => [ 'Disabled', 'Enabled' ],
+				'title'   => 'Single Post Pagination',
+				'type'    => 'checkbox',
+				'section' => 'general',
+				'default' => 0,
 			],
 			'enable_related_posts'          => [
 				'title'    => 'Related Posts',
@@ -54,25 +52,29 @@ class DIVInizerDashboard {
 				'children' => [ 'Disabled', 'Tags', 'Categories' ],
 			],
 			'enable_post_tags'              => [
-				'title'    => 'Post Tags',
+				'title'    => 'Display Post Tags',
 				'type'     => 'select',
 				'section'  => 'general',
 				'default'  => 0,
 				'children' => [ 'Disabled', 'Above Content', 'Below Content' ],
 			],
 			'enable_lightbox_everywhere'    => [
-				'title'    => 'Lightbox for posts and pages',
-				'type'     => 'select',
-				'section'  => 'general',
-				'default'  => 0,
-				'children' => [ 'Disabled', 'Enabled' ],
+				'title'   => 'Image Lightbox',
+				'type'    => 'checkbox',
+				'section' => 'general',
+				'default' => 0,
 			],
 			'enable_archive_blog_styles'    => [
-				'title'    => 'Archive Blog Styles',
-				'type'     => 'select',
-				'section'  => 'general',
-				'default'  => 0,
-				'children' => [ 'Disabled', 'Grid' ],
+				'title'   => 'Grid Style Blog Archive',
+				'type'    => 'checkbox',
+				'section' => 'general',
+				'default' => 0,
+			],
+			'disable_projects'              => [
+				'title'   => 'Remove Projects CPT',
+				'type'    => 'checkbox',
+				'section' => 'general',
+				'default' => 0,
 			],
 			'remove_sidebar'                => [
 				'title'    => 'Remove Sidebar',
@@ -82,18 +84,16 @@ class DIVInizerDashboard {
 				'children' => [ 'Disabled', 'Globally', 'Posts Only', 'Archive Pages Only' ],
 			],
 			'enable_year_shortcode'         => [
-				'title'       => 'Footer year shortcode',
-				'type'        => 'select',
-				'section'     => 'general',
-				'default'     => 0,
-				'children'    => [ 'Disabled', 'Enabled' ],
+				'title'   => '[year] Shortcode for Footer',
+				'type'    => 'checkbox',
+				'section' => 'general',
+				'default' => 0,
 			],
 			'featured_image_cropping'       => [
-				'title'    => 'Featured Image Cropping',
-				'type'     => 'select',
-				'section'  => 'general',
-				'default'  => 1,
-				'children' => [ 'Disabled', 'Enabled' ],
+				'title'   => 'Prevent Featured Image Cropping',
+				'type'    => 'checkbox',
+				'section' => 'general',
+				'default' => 0,
 			],
 		];
 
@@ -122,11 +122,10 @@ class DIVInizerDashboard {
 		} ?>
 
 		<!-- dashboard interface -->
-		<div id="divinizer_wrap">
+		<div id="divinizer_wrap" class="divinizer-settings">
 			<h1><?php esc_html_e( 'DIVInizer Options', 'divinizer' ); ?></h1>
 			<h2>How it Works: the below settings are applied to posts and pages that do not use the Divi Builder. For example, if you prefer to blog using the WordPress Classic Editor or new Block Editor, these settings will be applied to those posts.</h2>
 			<?php settings_errors(); ?>
-
 			<form method="post" action="options.php" id="divinizer_form">
 				<div class="divinizer_sections_wrap">
 					<?php
@@ -136,8 +135,28 @@ class DIVInizerDashboard {
 				</div>
 				<?php submit_button(); ?>
 				<div id="divinizer_save"></div>
-
 			</form>
+		</div>
+		<div id="divinizer_sidebar" class="divinizer-settings">
+			<h1><?php esc_html_e( 'Need Help With Divi?', 'divinizer' ); ?></h1>
+			<h1><?php esc_html_e( 'Site Maintenance Too Much Hassle?', 'divinizer' ); ?></h1>
+			<a href="https://wordx.press/divi-support-maintenance/?utm_source=divinizer_plugin&utm_medium=wp_admin_settings&utm_campaign=plugins" target="_blank"><img src="<?php echo DIVINIZER_URL ?>/assets/images/WordXpress-logo-med.png"></a>
+			<p class="large">Check out WordXpress!</p>
+			<p class="large"><i><strong>We make your life easier</strong> by supporting and maintaining your Divi + WordPress website.</i></p>
+			<ul class="large">
+				<li>Save time with content edits, updates, changes and support by Divi experts.</li>
+				<li>Increase leads and sales with premium SEO and review marketing plugins.</li>
+				<li>Add peace of mind with backups, monitoring, security, and more.</li>
+			</ul>
+			<p>Features Include</p>
+			<ul>
+				<li>A team of experts in both Divi & WordPress helping you.</li>
+				<li>Those same experts making changes & edits for you.</li>
+				<li>Maintenance, updates, backups, and monitoring.</li>
+				<li>Thousands of dollars of premium plugins & services.</li>
+			</ul>
+			<a href="https://wordx.press/divi-support-maintenance/?utm_source=divinizer_plugin&utm_medium=wp_admin_settings&utm_campaign=plugins" target="_blank" class="button button-primary">Learn More</a>
+			<p>Do you build Divi websites? If so, join our <a href="https://wordx.press/affiliate-area/" target="_blank">Affiliate Program</a> to get paid for ensuring your clients are taken care of after you’ve finished the design.</p>
 		</div>
 		<?php
 	}
@@ -201,13 +220,33 @@ class DIVInizerDashboard {
 		// output the field HTML according to de_field type
 		switch ( $this->divinizer_fields[ $id ]['type'] ) {
 			case 'select':
+				?><div class="et-epanel-box"><?php
 				echo '<select name="divinizer[' . $id . ']">';
-				for ( $i = 0; $i < sizeof( $this->divinizer_fields[ $id ]['children'] ); $i ++ ) {
+				$size = count( $this->divinizer_fields[ $id ]['children'] );
+				for ( $i = 0; $i < $size; $i ++ ) {
 					echo "<option value='" . $i . "' " . selected( $id_field, $i, false ) . ">";
 					esc_html_e( $this->divinizer_fields[ $id ]['children'][ $i ], 'divinizer' );
-					echo "</option>";
+					echo '</option>';
 				}
 				echo '</select>';
+				?></div><?php
+				if ( isset( $this->divinizer_fields[ $id ]['description'] ) ) {
+					echo '&nbsp;<p>' . $this->divinizer_fields[ $id ]['description'] . '</p>';
+				}
+				break;
+			case 'checkbox':
+				$checked = checked( 1, $id_field, false );
+				$button_state = $id_field ? 'et_pb_on_state' : 'et_pb_off_state';
+				?>
+				<div class="et-box-content">
+					<?php echo '<input type="checkbox" class="et-checkbox yes_no_button" name="divinizer[' . $id . ']" value="1" ' . $checked . ' style="display: none;">'; ?>
+					<div class="et_pb_yes_no_button <?php echo $button_state ?>"><!-- .et_pb_on_state || .et_pb_off_state -->
+						<span class="et_pb_value_text et_pb_on_value">Enabled</span>
+						<span class="et_pb_button_slider"></span>
+						<span class="et_pb_value_text et_pb_off_value">Disabled</span>
+					</div>
+				</div>
+				<?php
 				if ( isset( $this->divinizer_fields[ $id ]['description'] ) ) {
 					echo '&nbsp;<p>' . $this->divinizer_fields[ $id ]['description'] . '</p>';
 				}

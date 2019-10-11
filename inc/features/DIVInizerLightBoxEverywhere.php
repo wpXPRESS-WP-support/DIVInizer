@@ -26,6 +26,10 @@ class DIVInizerLightBoxEverywhere {
 	 * @return string
 	 */
 	public function divinizer_lightbox() {
+		$divi_page_builder_used = wp_basename( get_bloginfo( 'template_directory' ) ) === 'Divi' ? et_pb_is_pagebuilder_used( get_the_ID() ) : false;
+		if ( $divi_page_builder_used ) {
+			return;
+		}
 		?>
 		<script type="text/javascript">
 			(function ($) {
