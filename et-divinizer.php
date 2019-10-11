@@ -4,7 +4,7 @@
  * Plugin URI: http://wordx.press/divi-support-maintenance/?utm_source=divinizer_plugin&utm_medium=plugin_uri&utm_campaign=plugins
  * Description: A plugin that adds functionality to non-Divi-builder posts and pages: lightbox, author boxes, remove sidebar, and more!
  * Version: 1.2.0
- * Author: WordXpress - Divi Maintenance
+ * Author: WordXpress - Divi Support
  * Author URI: http://wordx.press/divi-support-maintenance/?utm_source=divinizer_plugin&utm_medium=author_uri&utm_campaign=plugins
  * Text Domain: divinizer
  * License: GPLv2 or later
